@@ -1,0 +1,15 @@
+title: fern
+navigation:
+  - section: Home
+    contents:
+      - page: Introduction
+        path: ./intro.mdx
+      - page: Why Fern?
+        path: ./why-fern.mdx
+      - page: Comparison with OpenAPI
+        path: ./comparison-with-openapi.mdx
+      - page: Getting Started
+        path: ./getting-started.mdx
+colors:
+  accentPrimary: '#a6d388'
+logo: ./logo.svg

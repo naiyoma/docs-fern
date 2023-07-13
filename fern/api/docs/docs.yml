@@ -37,9 +37,9 @@ navigation:
   - section: Using OpenAPI
     contents:
       - page: Importing OpenAPI
-        path: ./openapi.mdx
+        path: ./spec/openapi.mdx
       - page: Using Extensions
-        path: ./extensions.mdx
+        path: ./spec/extensions.mdx
   - section: Compiler
     contents:
       - page: fern generate
@@ -53,11 +53,11 @@ navigation:
   - section: Advanced Features
     contents:
       - page: Audiences
-        path: ./advances/audiences.mdx
+        path: ./advanced/audiences.mdx
       - page: Multiple APIs
-        path: ./advances/multiple-apis.mdx
+        path: ./advanced/multiple-apis.mdx
       - page: API Dependencies
-        path: ./advances/depending-on-other-apis.mdx
+        path: ./advanced/depending-on-other-apis.mdx
 colors:
   accentPrimary: '#a6d388'
 logo: ./logo.svg

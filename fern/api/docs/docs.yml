@@ -10,6 +10,54 @@ navigation:
         path: ./comparison-with-openapi.mdx
       - page: Getting Started
         path: ./getting-started.mdx
+  - section: Showcase
+    contents:
+      - page: TypeScript SDK
+        path: ./showcase/typescript-sdk.mdx
+      - page: FastAPI
+        path: ./showcase/fastapi.mdx
+      - page: Express
+        path: ./showcase/express.mdx
+  - section: Defining your API
+    contents:
+      - page: Fern Definition
+        path: ./definition/definition.mdx
+      - page: Types
+        path: ./definition/types.mdx
+      - page: Endpoints
+        path: ./definition/endpoints.mdx
+      - page: Errors
+        path: ./definition/errors.mdx
+      - page: Imports
+        path: ./definition/imports.mdx
+      - page: api.yml
+        path: ./definition/api-yml.mdx
+      - page: Packages
+        path: ./definition/packages.mdx
+  - section: Using OpenAPI
+    contents:
+      - page: Importing OpenAPI
+        path: ./openapi.mdx
+      - page: Using Extensions
+        path: ./extensions.mdx
+  - section: Compiler
+    contents:
+      - page: fern generate
+        path: ./compiler/fern-generate.mdx
+      - page: Generators
+        path: ./compiler/generators.mdx
+      - page: fern.config.json
+        path: ./compiler/fern-config-json.mdx
+      - page: CLI Reference
+        path: ./compiler/cli-reference.mdx
+  - section: Advanced Features
+    contents:
+      - page: Audiences
+        path: ./advances/audiences.mdx
+      - page: Multiple APIs
+        path: ./advances/multiple-apis.mdx
+      - page: API Dependencies
+        path: ./advances/depending-on-other-apis.mdx
 colors:
   accentPrimary: '#a6d388'
 logo: ./logo.svg

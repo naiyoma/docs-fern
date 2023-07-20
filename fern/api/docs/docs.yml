@@ -60,4 +60,5 @@ navigation:
         path: ./advanced/depending-on-other-apis.mdx
 colors:
   accentPrimary: '#a6d388'
-logo: ./logo.svg
+logo: ./logo.png
+favicon: ./favicon.png

@@ -3,4 +3,4 @@ groups:
   staging-docs:
     generators: []
     docs:
-      domain: fern-docs-staging.docs.buildwithfern.com
+      domain: staging.docs.buildwithfern.com

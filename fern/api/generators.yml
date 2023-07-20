@@ -1,6 +1,6 @@
 default-group: local
 groups:
-  documentation:
+  staging-docs:
     generators: []
     docs:
-      domain: aevitas.docs.buildwithfern.com
+      domain: staging.docs.buildwithfern.com

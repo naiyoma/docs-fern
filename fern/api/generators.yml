@@ -1,6 +1,11 @@
-default-group: local
+default-group: staging-docs
 groups:
   staging-docs:
     generators: []
     docs:
       domain: staging.docs.buildwithfern.com
+
+  prod-docs:
+    generators: []
+    docs:
+      domain: prod.docs.buildwithfern.com

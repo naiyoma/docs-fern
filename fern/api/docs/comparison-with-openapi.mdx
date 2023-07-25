@@ -2,12 +2,12 @@
   <img src="./standards-xkcd.png" />
 </a>
 
-We built Fern from the ground up to address our dissatisfaction with OpenAPI.
+We built the Fern specification from the ground up to address our dissatisfaction with the OpenAPI specification.
 
-Despite being a different format for describing APIs, **you are never locked in to
-Fern.** It's easy to convert your Fern Definition to OpenAPI.
+Despite being a different format for describing APIs, **you are never locked in to using the
+Fern spec.** It's easy and free to convert a Fern spec to an OpenAPI spec.
 
-**TL;DR: we differ from OpenAPI in these areas:**
+**TL;DR: The Fern spec differs from the OpenAPI spec in these areas:**
 
 - [Simplicity](#simplicity)
 - [New features in specification](#new-features-in-specification)
@@ -18,12 +18,12 @@ Fern.** It's easy to convert your Fern Definition to OpenAPI.
 
 ## Simplicity
 
-The Fern specification was built to be **easy to read and write.** Here are some
+The Fern spec was built to be **easy to read and write.** Here are some
 examples.
 
 ### Example: Map
 
-Here's how you'd define a simple string-to-string dictionary in Fern:
+Here's how you'd define a simple string-to-string dictionary in a Fern spec:
 
 ```yaml Fern example
 map<string, string>
@@ -39,7 +39,7 @@ additionalProperties:
 
 ### Example: Discriminated union
 
-Here's how you might define an `Animal` union type in Fern:
+Here's how you might define an `Animal` union type in a Fern spec:
 
 ```yaml Fern example
 Animal:
@@ -64,7 +64,7 @@ Cat:
     hunts: boolean
 ```
 
-In OpenAPI:
+In an OpenAP spec:
 
 ```json OpenAPI example
 Animal:
@@ -114,7 +114,7 @@ For example, we're adding support for asynchronous / bi-directional protocols
 ## Quality of code generation
 
 We built Fern from first principles to ensure that **we always generate
-idimoatic code.** There are a number of footguns in OpenAPI: if you use them,
+idimoatic code.** There are a number of [footguns](https://en.wiktionary.org/wiki/footgun) in OpenAPI: if you use them,
 it's impossible to generate high-quality code. Here are examples:
 
 - Using inline (anonymous) types in an OpenAPI spec makes it impossible to generate idiomatic

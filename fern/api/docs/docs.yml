@@ -1,4 +1,4 @@
-title: fern
+title: Fern | Docs
 navigation:
   - section: Home
     contents:
@@ -59,6 +59,6 @@ navigation:
       - page: API Dependencies
         path: ./advanced/depending-on-other-apis.mdx
 colors:
-  accentPrimary: '#a6d388'
+  accentPrimary: "#a6d388"
 logo: ./logo.png
 favicon: ./favicon.png

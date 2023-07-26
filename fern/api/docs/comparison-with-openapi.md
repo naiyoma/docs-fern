@@ -4,8 +4,7 @@
 
 We built the Fern specification from the ground up to address our dissatisfaction with the OpenAPI specification.
 
-Despite being a different format for describing APIs, **you are never locked in to using the
-Fern spec.** It's easy and free to convert a Fern spec to an OpenAPI spec.
+Despite being a different format for describing APIs, **you are never locked in to using the Fern spec.** It's easy and free to convert a Fern spec to an OpenAPI spec.
 
 **TL;DR: The Fern spec differs from the OpenAPI spec in these areas:**
 
@@ -109,7 +108,7 @@ Cat:
 
 As we continue to build Fern, our ability to control the format is invaluable.
 For example, we're adding support for asynchronous / bi-directional protocols
-(e.g. websockets) which is not possible in OpenAPI.
+(e.g., websockets) which is not possible in OpenAPI.
 
 ## Quality of code generation
 
@@ -132,9 +131,9 @@ Pitfalls like these are why it's common for OpenAPI-generated code to
 
 Beyond the format, we've built Fern based on best practices in compiling. This includes:
 
-- **Semantic validation** (e.g. disallowing references to types that haven't been defined)
+- **Semantic validation** (e.g., disallowing references to types that haven't been defined)
 - **Building the compiler to be modular,** as we have multiple independent outputs
-  (e.g. TypeScript SDK, Postman Collection).
+  (e.g., TypeScript SDK, Postman collection).
 - **Producing an intermediate representation** so that different generators don't
   have to implement duplicative logic. Beyond saving time, this reduces errors and
   increases consistency among outputs.
@@ -148,8 +147,8 @@ helpful for backend API development. In comparison, we've focused heavily on
 server-side integration, as that's where most of the API development process
 occurs! In particular, we:
 
-- **Auto-generate the types** (e.g. Pydantic models for FastAPI)
-- **Auto-generate the networking logic** (e.g. FastAPI routes)
+- **Auto-generate the types** (e.g., Pydantic models for FastAPI)
+- **Auto-generate the networking logic** (e.g., FastAPI routes)
 - **Auto-generate exceptions** that you can throw. Fern handles converting to the
   correct HTTP status code.
 - **Auto-generate server interfaces** for you to implement your business logic.
@@ -178,10 +177,10 @@ our compiler of how you can remediate.
 ## Cloud-based code generation and publishing
 
 Fern runs your code generation in the cloud by default. This improves reliability as we
-run the generators in consistent, containerized environments. You run [`fern generate`](/compiler/cli-reference#fern-generate-group-group-version-version),
+run the generators in consistent, containerized environments. You run [`fern generate`](cli-reference.md),
 and _it just works_. You don't need Java installed on your computer to
 generate a Java SDK.
 
 Fern handles publishing too. We don't just spit out a bunch of code and say,
-"good luck." Fern can publish directly to registries (e.g. npm, Maven) and to
+"good luck." Fern can publish directly to registries (e.g., npm, Maven) and to
 GitHub repos.

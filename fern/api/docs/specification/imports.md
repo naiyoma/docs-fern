@@ -12,5 +12,4 @@ types:
       people: list<person.Person> # use an imported type
 ```
 
-Note that you can only import files that exist in your Fern Definition (i.e. in
-the same `definition/` folder).
+Note that you can only import files that exist in your Fern specification (i.e., in the same `definition/` folder).

@@ -9,16 +9,16 @@
 - **`date`** _An RFC 3339, section 5.6 date (YYYY-MM-DD). For example, `2017-07-21`._
 - **`uuid`**
 - **`base64`**
-- **`list`** _e.g. list\<string\>_
-- **`set`** _e.g. set\<string\>_
-- **`map`** _e.g. map\<string, integer\>_
-- **`optional`** _e.g. optional\<string\>_
+- **`list`** _e.g., list\<string\>_
+- **`set`** _e.g., set\<string\>_
+- **`map`** _e.g., map\<string, integer\>_
+- **`optional`** _e.g., optional\<string\>_
 
 **`unknown`**
 
 Fern comes with a special type `unknown`, which signifies that the type cannot
 be represented in Fern. Often, this is because the value has a dynamic shape
-(e.g. user-supplied data).
+(e.g., user-supplied data).
 
 In cases where you use `unknown`, Fern will assume the value is optional. There's
 no difference between `unknown` and `optional<unknown>`.
@@ -168,7 +168,7 @@ This corresponds to a JSON object like this:
 ### Documentation
 
 You can add documentation for types. These docs are passed into the compiler,
-and are incredibly useful in the generated outputs (e.g. docstrings in SDKs).
+and are incredibly useful in the generated outputs (e.g., docstrings in SDKs).
 
 ```yaml
 types:
@@ -195,7 +195,7 @@ interface Person {
 ### Examples
 
 You can add examples for types. These are passed into the compiler to be used in
-the generated outputs (e.g. examples in the Postman Collection).
+the generated outputs (e.g., examples in the Postman collection).
 
 ```yaml
 types:

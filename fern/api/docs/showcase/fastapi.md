@@ -17,7 +17,7 @@ Let's walk through the [Fern FastAPI Starter](https://github.com/fern-api/fastap
 
 ### Step 1: Define the API
 
-```yaml fern/api/definition/imdb.yml
+```yaml fern/api/specification/imdb.yml
 service:
   auth: false
   base-path: /movies
@@ -144,4 +144,8 @@ $ curl --location --request GET --silent 'localhost:8080/movies/oceans-11' | jq 
 
 ### Demo video
 
-<iframe src="https://www.loom.com/embed/42de542022de4e55a1349383c7a465eb" width="100%" height="600px"></iframe>
+<iframe
+  src="https://www.loom.com/embed/42de542022de4e55a1349383c7a465eb"
+  width="100%"
+  height="600px"
+></iframe>

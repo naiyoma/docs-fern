@@ -22,7 +22,7 @@ name: api
 ## API docs
 
 You can define top level API docs. These docs will come through in the
-OpenAPI spec and Postman Collection.
+OpenAPI spec and Postman collection.
 
 ```yaml api.yml
 name: api
@@ -143,7 +143,7 @@ You can specify Fern to discriminate by error name. If you select this strategy,
 then Fern will assume that every error response has an extra property denoting
 the error name.
 
-If you use Fern to generate server-side boilerplate, then this option provides
+If you use Fern to generate server-side code, then this option provides
 the most flexibility. Otherwise, you'll probably want to use the status code
 discrimination strategy.
 

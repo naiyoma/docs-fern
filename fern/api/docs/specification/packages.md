@@ -1,6 +1,6 @@
 ## What is a package?
 
-Every folder in your API Definition is a package.
+Every folder in your API definition is a package.
 
 ```yaml
 fern/

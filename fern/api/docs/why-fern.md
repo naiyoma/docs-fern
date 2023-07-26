@@ -11,8 +11,7 @@ software companies.
 ## Schema-first API design
 
 Fern embraces schema-first API design: **You first define your API in Fern.**
-After that, you implement your API and generate helpful outputs, like SDKs or a
-Postman Collection.
+After that, you implement your API and generate helpful outputs, like SDKs or API documentation.
 
 With schema-first API design, you unlock a few benefits:
 
@@ -40,7 +39,7 @@ The Fern compiler handles the tedious and time-consuming developer work
 that goes into building a new API. **This frees up developer time to build your
 product faster.**
 
-On the server side, Fern generates the types and networking logic for you. Just
+On the server-side, Fern generates the types and networking logic for you. Just
 implement the business logic, and you're good to go.
 
 When consuming your new API, Fern's auto-generated SDKs are a dream.

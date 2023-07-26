@@ -9,7 +9,7 @@ You can also point to a URL
 
 ```bash
 npm install -g fern-api
-fern init --openapi <url to OpenAPI>
+fern init --openapi <url to openapi>
 
 ```
 

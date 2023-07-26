@@ -7,7 +7,7 @@ npm install -g fern-api
 ### The `fern/` directory
 
 The `fern/` directory contains your API definition. This generally lives in your
-backend repo, but you can also have an independent repo dedicated to your API (like [Raven's](https://github.com/ravenappdev/raven-api)).
+backend repo, but you can also have an independent repo dedicated to your API (like [Seam's](https://github.com/seamapi/fern-config)).
 
 In the root of your repo, run:
 
@@ -35,7 +35,7 @@ You can import an existing OpenAPI spec by running
 fern init --openapi /path/to/openapi.yml
 ```
 
-More information [here](spec/openapi).
+More information [here](./spec/openapi).
 
 ### Generating an SDK
 
@@ -46,7 +46,7 @@ fern generate
 ```
 
 By default, `generators.yml` is configured to generate a TypeScript SDK and an
-OpenAPI spec. You can read more about generation on the [`fern generate`](compiler/fern_generate)
+OpenAPI spec. You can read more about generation on the [`fern generate`](./compiler/fern-generate) 
 page.
 
 ### Defining your API
@@ -98,11 +98,11 @@ errors:
 
 </Accordion>
 
-Your **Fern Definition** is a set of YAML files that describe your API. You can
-learn more about this in the [Define your API](/definition) section.
+Your **Fern specification** is a set of YAML files that describe your API. You can
+learn more about this in the [Define your API](./specification/specification) section.
 
 ### Running the Fern compiler
 
-The Fern compiler takes your Fern Definition and generates useful outputs, like
+The Fern compiler takes your Fern specification and generates useful outputs, like
 SDKs. You can learn more about configuring outputs in the [Compiler](./compiler/generators)
 section.

@@ -4,12 +4,12 @@ You can run the fern compiler using the Fern CLI:
 fern generate --group <group name>
 ```
 
-To run the generators locally (rather than in the cloud), you can use the [`--local` option](/compiler/cli-reference#fern-generate-group-group-version-version).
+To run the generators locally (rather than in the cloud), you can use the [`--local` option](/cli-reference.md#fern-generate---group-group---version-version).
 
 **TL;DR:** `generators.yml` controls what Fern will generate for you.
 `fern generate` validates your API and runs generators in the cloud
 in isolated, containerized environments. You can view the list of available
-generators [here](generators).
+generators [here](../generators.md).
 
 # A modular compiler
 
@@ -18,12 +18,12 @@ are some examples of what the Fern compiler can output:
 
 - A TypeScript SDK
 - FastAPI boilerplate
-- A Postman Collection
+- A Postman collection
 - An OpenAPI spec
 
 To support the long and growing list of outputs, we've built the Fern Compiler
 to be **modular.** The core compiler is responsible for parsing and validating
-your Fern Definition, and producing the intermediate representation.
+your Fern specification, and producing the intermediate representation.
 
 The remaining work is handled by **generators.** A Fern generator is a program
 that takes in an intermediate representation and outputs... something. Generators
@@ -50,38 +50,92 @@ of `generators.yml`.
 In `generators.yml`, you separate generators into **groups.**
 
 ```yaml generators.yml
+default-group: server
 groups:
-  # we run the FastAPI generator for server-side development
+  # we run the Java generator for server-side development
   server:
     generators:
-      - name: fernapi/fern-fastapi-server
-        version: 0.0.33
+      - name: fernapi/fern-java
+        version: 0.0.115
+        config:
+          mode: server
+          serverFrameworks: jersey
+
+  # when we release, we publish our external-facing SDKs
+  sdks:
+    generators:
+      - name: fernapi/fern-typescript-sdk
+        version: 0.5.19-2-ge871eece
         output:
-          location: local-file-system
-          path: ../../app/fern/server
+          location: npm
+          package-name: "@fern-api/nursery"
+          token: ${NPM_TOKEN}
+        github:
+          repository: fern-api/nursery-node
+        config:
+          namespaceExport: Nursery
+          timeoutInSeconds: infinity
+      - name: fernapi/fern-java-sdk
+        version: 0.0.124-2-g58ed4e2
+        output:
+          location: maven
+          coordinate: io.github.fern-api:nursery
+          username: dsinghvi
+          password: ${MAVEN_PASSWORD}
+        github:
+          repository: fern-api/nursery-java
+      - name: fernapi/fern-openapi
+        version: 0.0.11-4-g1c29f6c
+        github:
+          repository: fern-api/nursery-openapi
+      - name: fernapi/fern-postman
+        version: 0.0.44
+        output:
+          location: postman
+          api-key: ${POSTMAN_API_KEY}
+          workspace-id: ${POSTMAN_WORKSPACE_ID}
+        github:
+          repository: fern-api/nursery-postman
+      - name: fernapi/fern-python-sdk
+        version: 0.3.2-1-g9bff439a
+        output:
+          location: pypi
+          package-name: fern-nursery
+          url: https://test.pypi.org/legacy/
+          token: ${PYPI_TOKEN}
+        github:
+          repository: fern-api/nursery-python
+        config:
+          timeout_in_seconds: infinity
+
   # on every commit into the main branch, we generate SDKs for internal use
   internal:
     generators:
-      - name: fernapi/fern-typescript-node-sdk
-        version: 0.0.249
-        output:
-          location: npm
-          package-name: "@fern-api/plantstore"
-          token: ${NPM_TOKEN}
       - name: fernapi/fern-java-sdk
-        version: 0.0.125
+        version: 0.0.124-2-g58ed4e2
         output:
           location: maven
-          coordinate: io.github.fern-api:plantstore
-          username: ${MAVEN_USERNAME}
-          password: ${MAVEN_PASSWORD}
-  # when we release, we publish our external-facing SDKs
-  external:
-    generators:
-      - name: fernapi/fern-typescript-node-sdk
-        version: 0.0.249
-        github:
-          repository: my-org/node-sdk
+          url: maven.buildwithfern.com
+          coordinate: com.fern.fern:nursery
+          username: fern
+          password: ${FERN_DEV_TOKEN}
+      - name: fernapi/fern-typescript-sdk
+        version: 0.1.5
+        output:
+          location: npm
+          url: npm.buildwithfern.com
+          package-name: "@fern-fern/nursery"
+          token: ${FERN_DEV_TOKEN}
+        config:
+          neverThrowErrors: true
+      - name: fernapi/fern-python-sdk
+        version: 0.0.52-26-gc10478d4
+        output:
+          location: pypi
+          url: pypi.buildwithfern.com
+          package-name: fern-fern-nursery
+        config:
+          include_union_utils: true
 ```
 
 You can run the fern compiler for a particular group using the Fern CLI:
@@ -112,7 +166,7 @@ generator.
 
 ## Name
 
-Each generator has a unique name, e.g. `fernapi/fern-typescript-node-sdk`.
+Each generator has a unique name, e.g., `fernapi/fern-typescript-node-sdk`.
 
 ```yaml generators.yml
 groups:
@@ -131,7 +185,7 @@ groups:
   external:
     generators:
       - name: fernapi/fern-typescript-node-sdk
-        version: 0.0.249 # <---
+        version: 0.7.2 # <---
 ```
 
 ## Configuration
@@ -142,9 +196,9 @@ Some generators allow for custom configuration, which you can specify using the 
  groups:
    external:
        - name: fernapi/fern-openapi
-         version: 0.0.11-4-g1c29f6c
+         version: 0.0.28
          github:
-           repository: fern-api/plantstore-openapi
+           repository: your-org/openapi
 +        config:
 +          format: yaml
 ```
@@ -169,7 +223,7 @@ groups:
   external:
     generators:
       - name: fernapi/fern-typescript-node-sdk
-        version: 0.0.249
+        version: 0.7.2
         output: # <---
           location: npm
           package-name: your-package-name
@@ -184,7 +238,7 @@ override the registry using the `url` key.
    external:
      generators:
        - name: fernapi/fern-typescript-node-sdk
-         version: 0.0.249
+         version: 0.7.2
          output:
            location: npm
            package-name: your-package-name
@@ -202,7 +256,7 @@ groups:
   external:
     generators:
       - name: fernapi/fern-java-sdk
-        version: 0.0.125
+        version: 0.3.7
         output: # <---
           location: maven
           coordinate: com.your-coordinate
@@ -218,7 +272,7 @@ override the registry using the `url` key.
    external:
      generators:
        - name: fernapi/fern-java-sdk
-         version: 0.0.125
+         version: 0.3.7
          output:
            location: maven
            coordinate: com.your-coordinate
@@ -237,7 +291,7 @@ groups:
   external:
     generators:
       - name: fernapi/fern-python-sdk
-        version: 0.1.0
+        version: 0.3.7
         output: # <---
           location: pypi
           package-name: your-package-name
@@ -271,7 +325,7 @@ groups:
   external:
     generators:
       - name: fernapi/fern-postman
-        version: 0.0.31
+        version: 0.0.44
         output: # <---
           location: postman
           api-key: ${POSTMAN_API_KEY}
@@ -292,7 +346,7 @@ groups:
   server:
     generators:
       - name: fernapi/fern-fastapi-server
-        version: 0.0.33
+        version: 0.3.7
         output: # <---
           location: local-file-system
           path: ../../app/fern/server
@@ -303,7 +357,7 @@ groups:
 Fern can publish the generator's output to a GitHub repo. It can be useful to
 have a dedicated repo for an output to track issues and its history over time.
 
-For an example, check out [Flipt's Node.js SDK repo](https://github.com/flipt-io/flipt-node).
+For an example, check out [Vellum's Node.js SDK repo](https://github.com/vellum-ai/vellum-client-node).
 
 When you run the compiler with `fern generate`, Fern will re-generate the Github
 repo and push to the `main` branch.
@@ -313,9 +367,9 @@ groups:
   external:
     generators:
       - name: fernapi/fern-typescript-node-sdk
-        version: 0.0.249
+        version: 0.7.2
         github: # <---
-          repository: my-org/node-sdk
+          repository: your-org/node-sdk
 ```
 
 ### Combining with `output`
@@ -344,7 +398,7 @@ When you run the compiler with `fern generate`, Fern will:
 
 1. Re-generate the Github repo and push to the `main` branch
 2. Tag a release on the generated repo. This will trigger the GitHub workflow
-   to publish to the output location (e.g. npm)
+   to publish to the output location (e.g., npm)
 
 ### `.fernignore`
 

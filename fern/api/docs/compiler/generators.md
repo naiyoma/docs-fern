@@ -1,4 +1,4 @@
-This page details all the generators you can specify in your [`generators.yml`](generate#generators-yml).
+This page details all the generators you can specify in your [`generators.yml`](/fern-generate#generators-yml).
 
 All of our generators are [open source](https://github.com/fern-api).
 
@@ -55,7 +55,7 @@ SDK for usage in the browser. It can publish the SDK to npmjs.org (or any other 
 [Source code](https://github.com/fern-api/express-starter)
 
 The Express generator generates types and networking logic for your Express server. This saves you time
-and add compile-time safety that you are serving the exact API that you specified in your Fern Definition.
+and add compile-time safety that you are serving the exact API that you specified in your Fern specification.
 
 ⚠️ Make sure to enable `allowSyntheticDefaultImports` in your `tsconfig.json` when using this generator.
 
@@ -108,7 +108,7 @@ SDK. It can publish the SDK to Maven Central (or any other Maven repository).
 
 [Source code](https://github.com/fern-api/fern-postman)
 
-The Postman generator outputs a Postman Collection (in Postman's
+The Postman generator outputs a Postman collection (in Postman's
 `collection.json` format). The generator can sync the collection with your
 Postman Workspace.
 

@@ -7,13 +7,13 @@ If you don't have a `default-group` specified in `generators.yml`, then you must
 specify a group using the `--group` option.
 
 You can specify a version using the `--version` option. This version string is
-used when publishing SDKs to registries (e.g. npm).
+used when publishing SDKs to registries (e.g., npm).
 
 ### Running locally
 
 By default, the generation runs in the cloud. If you want to run it on your local machine, you can use the `--local` option. This will run each generator in a Docker container.
 
-By default, Fern will delete the container after running. To keep the container around (e.g. to look at the generator's logs), use the `--keepDocker` option.
+By default, Fern will delete the container after running. To keep the container around (e.g., to look at the generator's logs), use the `--keepDocker` option.
 
 ## `fern check`
 
@@ -27,7 +27,7 @@ latest version.
 ## `fern add <generator>`
 
 `fern add` adds a new generator to your `generators.yml`. You can view the full
-list of supported generators in the [Generators](generators) section.
+list of supported generators in the [Generators](/generators) section.
 
 ## `fern init`
 
@@ -36,4 +36,4 @@ list of supported generators in the [Generators](generators) section.
 ## `fern register`
 
 _Advanced feature._ You can register your API so it can be depended on by other
-APIs. Read more in the [Depending on other APIs](/advanced/depending-on-other-apis) section.
+APIs. Read more in the [Depending on other APIs](../advanced/depending-on-other-apis.md) section.

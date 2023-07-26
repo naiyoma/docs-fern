@@ -3,61 +3,61 @@ navigation:
   - section: Home
     contents:
       - page: Introduction
-        path: ./intro.mdx
+        path: ./intro.md
       - page: Why Fern?
-        path: ./why-fern.mdx
+        path: ./why-fern.md
       - page: Comparison with OpenAPI
-        path: ./comparison-with-openapi.mdx
+        path: ./comparison-with-openapi.md
       - page: Getting Started
-        path: ./getting-started.mdx
+        path: ./getting-started.md
   - section: Showcase
     contents:
       - page: TypeScript SDK
-        path: ./showcase/typescript-sdk.mdx
+        path: ./showcase/typescript-sdk.md
       - page: FastAPI
-        path: ./showcase/fastapi.mdx
+        path: ./showcase/fastapi.md
       - page: Express
-        path: ./showcase/express.mdx
+        path: ./showcase/express.md
   - section: Defining your API
     contents:
-      - page: Fern Definition
-        path: ./definition/definition.mdx
+      - page: Fern specification
+        path: ./specification/specification.md
       - page: Types
-        path: ./definition/types.mdx
+        path: ./specification/types.md
       - page: Endpoints
-        path: ./definition/endpoints.mdx
+        path: ./specification/endpoints.md
       - page: Errors
-        path: ./definition/errors.mdx
+        path: ./specification/errors.md
       - page: Imports
-        path: ./definition/imports.mdx
+        path: ./specification/imports.md
       - page: api.yml
-        path: ./definition/api-yml.mdx
+        path: ./specification/api-yml.md
       - page: Packages
-        path: ./definition/packages.mdx
+        path: ./specification/packages.md
   - section: Using OpenAPI
     contents:
       - page: Importing OpenAPI
-        path: ./spec/openapi.mdx
+        path: ./spec/openapi.md
       - page: Using Extensions
-        path: ./spec/extensions.mdx
+        path: ./spec/extensions.md
   - section: Compiler
     contents:
       - page: fern generate
-        path: ./compiler/fern-generate.mdx
+        path: ./compiler/fern-generate.md
       - page: Generators
-        path: ./compiler/generators.mdx
+        path: ./compiler/generators.md
       - page: fern.config.json
-        path: ./compiler/fern-config-json.mdx
+        path: ./compiler/fern-config-json.md
       - page: CLI Reference
-        path: ./compiler/cli-reference.mdx
+        path: ./compiler/cli-reference.md
   - section: Advanced Features
     contents:
       - page: Audiences
-        path: ./advanced/audiences.mdx
+        path: ./advanced/audiences.md
       - page: Multiple APIs
-        path: ./advanced/multiple-apis.mdx
+        path: ./advanced/multiple-apis.md
       - page: API Dependencies
-        path: ./advanced/depending-on-other-apis.mdx
+        path: ./advanced/depending-on-other-apis.md
 colors:
   accentPrimary: "#a6d388"
 logo: ./logo.png

@@ -1,6 +1,6 @@
 Audiences are a useful tool for segmenting your API for different consumers. Common audiences include:
 
-- Internal consumers (e.g. frontend developers who use the API)
+- Internal consumers (e.g., frontend developers who use the API)
 - Beta testers
 - Customers
 

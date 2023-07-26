@@ -18,5 +18,5 @@ The structure of the documentation, including navigation elements, is outlined i
 
 We welcome contributions to to help complete the documentation and make it more elaborate.
 
-* For smaller contributions, e.g. grammatical corrections or smaller fixes, feel free to open a pull request directly.
-* If your contribution is more sizable, e.g. documenting a new feature, please open an issue before starting your work, so we have a chance to review and ask any questions beforehand.
+- For smaller contributions, e.g., grammatical corrections or smaller fixes, feel free to open a pull request directly.
+- If your contribution is more sizable, e.g., documenting a new feature, please open an issue before starting your work, so we have a chance to review and ask any questions beforehand.

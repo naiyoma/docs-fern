@@ -1,6 +1,6 @@
 name: ci
 
-on: [push]
+on: push
 
 jobs:
   fern-check:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Download Fern
         run: npm install -g fern-api
-      
+
       - name: Generate Staging Docs
         env:
           FERN_TOKEN: ${{ secrets.FERN_TOKEN }}

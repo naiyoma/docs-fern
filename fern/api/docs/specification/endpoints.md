@@ -98,7 +98,7 @@ service:
 ### `allow-multiple`
 
 You can use `allow-multiple` to specify that a query parameter is allowed
-multiple times in the URL, e.g. `?filter=jane&filter=smith`. This will alter
+multiple times in the URL, e.g., `?filter=jane&filter=smith`. This will alter
 the generated SDKs so that consumers can provide multiple values for the query
 parameter.
 
@@ -260,7 +260,7 @@ You can learn more about how to define errors on the [Errors](./errors) page.
 
 When you declare an example, you can also specify some examples of how that
 endpoint might be used. These are used by the compiler to enhance the generated
-outputs (e.g. examples in the generated Postman Collection).
+outputs (e.g., examples in the generated Postman collection).
 
 ```yaml user.yml
 service:

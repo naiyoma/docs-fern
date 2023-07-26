@@ -16,4 +16,4 @@ fern/
 ```
 
 **Note:** if you have multiple APIs in one repo, you'll need to use the `--api` flag
-when using the compiler, e.g. `fern generate --api other-api`.
+when using the compiler, e.g., `fern generate --api other-api`.

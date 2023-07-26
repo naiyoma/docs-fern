@@ -4,7 +4,9 @@
 [![Pulls-opened](https://img.shields.io/github/issues-pr/fern-api/docs.svg)](https://GitHub.com/dotnet/docs/pulls?q=is%3Aissue+is%3Aopened)
 [![Pulls-merged](https://img.shields.io/github/issues-search/fern-api/docs?label=merged%20pull%20requests&query=is%3Apr%20is%3Aclosed%20is%3Amerged&color=darkviolet)](https://github.com/dotnet/docs/pulls?q=is%3Apr+is%3Aclosed+is%3Amerged)
 
-This repository contains the conceptual documentation for [Fern](https://buildwithfern.com), the open source toolkit for designing, building, and consuming REST APIs. The [Fern documentation website](https://buildwithfern.com/docs/intro) is built on Fern's own technology available through the Fern CLI.
+Latest version: https://staging.docs.buildwithfern.com/
+
+This repository contains the conceptual documentation for [Fern](https://buildwithfern.com), the open source toolkit for designing, building, and consuming REST APIs. The [Fern documentation website](https://buildwithfern.com/docs/intro) will be built on Fern's own technology available through the Fern CLI.
 
 Issues pertaining to documentation are tracked in this repository. If you feel there is anything wrong in the documentation, or we are missing something important, feel free to open up an issue and we'd be happy to discuss it!
 

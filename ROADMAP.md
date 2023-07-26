@@ -13,4 +13,4 @@ The following outlines a roadmap for the development of the Fern Docs.
 - [] Add "fern" in text next to the logo.
 - [] Add a GitHub Action to check for broken links.
 - [] Search shows no results and doesn't throw an error
-  ![search fail](<Screenshot 2023-07-25 at 23.45.png>)
+  ![search fail](search-no-results.png)

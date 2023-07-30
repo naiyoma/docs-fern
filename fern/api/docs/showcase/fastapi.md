@@ -100,11 +100,11 @@ register(app, imdb=MoviesService())
 
 The type checker will warn you if you make mistakes implementing your API.
 
-![Invalid return value](images/invalid_return_value.png)
+![Invalid return value](../images/invalid_return_value.png)
 
 If you change the signature of the endpoint method, you'll get an error:
 
-![Invalid signature](images/invalid_signature.png)
+![Invalid signature](../images/invalid_signature.png)
 
 You can use the command line to check for compile errors:
 

@@ -60,5 +60,5 @@ navigation:
         path: ./advanced/depending-on-other-apis.md
 colors:
   accentPrimary: "#a6d388"
-logo: ./logo.png
-favicon: ./favicon.png
+logo: ./images/logo.png
+favicon: ./images/favicon.png

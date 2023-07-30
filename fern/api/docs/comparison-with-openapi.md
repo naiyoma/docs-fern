@@ -1,5 +1,5 @@
 <a href="https://xkcd.com/927" target="_blank">
-  <img src="./standards-xkcd.png" />
+<img src="images/standards-xkcd.png" alt="XKCD another standard comic">
 </a>
 
 We built the Fern specification from the ground up to address our dissatisfaction with the OpenAPI specification.

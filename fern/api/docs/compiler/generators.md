@@ -125,7 +125,7 @@ Postman Workspace.
 
 To find your workspace ID, select the ⓘ icon in the top right of the workspace view.
 
-![Postman Workspace ID](images/postman-workspace-id.png)
+![Postman Workspace ID](../images/postman-workspace-id.png)
 
 ## `fern-fastapi-server`
 

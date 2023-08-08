@@ -60,5 +60,8 @@ navigation:
         path: ./advanced/depending-on-other-apis.md
 colors:
   accentPrimary: "#a6d388"
-logo: ./images/logo.png
+logo:
+  path: ./images/logo.png
+  height: 24
+  href: https://buildwithfern.com?utm_source=fern-docs&utm_medium=logo
 favicon: ./images/favicon.png

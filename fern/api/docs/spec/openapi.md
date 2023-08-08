@@ -1,11 +1,13 @@
-To use an OpenAPI spec, run the command below.
+To use an OpenAPI spec, you can pass in the filepath or URL. 
+
+To pass in an OpenAPI spec from a filepath:
 
 ```bash
 npm install -g fern-api
 fern init --openapi <filepath to openapi>
 ```
 
-You can also point to a URL
+Alternatively, to point to the URL of an OpenAPI spec:
 
 ```bash
 npm install -g fern-api
@@ -24,6 +26,8 @@ fern/
     └─ openapi.json # <--- your openapi file
 ```
 
-Run `fern check` to validate the OpenAPI spec.
+Run `fern check` to validate the OpenAPI spec. Resolve any errors. Having trouble? Reach out in the [Fern Discord server](https://discord.com/invite/JkkXumPzcG). 
+
+If you're having trouble understanding the errors, run the command `fern write-definition`. This command will convert your OpenAPI spec into a Fern definition. [Read more.](../compiler/cli-reference.md#fern-write-definition)
 
 If there are no errors, you can run [fern generate](../compiler/fern-generate).

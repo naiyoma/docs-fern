@@ -1,10 +1,10 @@
-Each **Fern specification** file may define:
+Each **Fern definition** file may define:
 
-- **[Custom types](/specification/types)**. Use **custom types** to build your data model.
-- **[Services](/specification/services)**. A **service** is a set of related REST endpoints.
-- **[Errors](/specification/errors)**. An **error** represents a failed (non-200) response from an endpoint.
+- **[Custom types](/definition/types)**. Use **custom types** to build your data model.
+- **[Services](/definition/services)**. A **service** is a set of related REST endpoints.
+- **[Errors](/definition/errors)**. An **error** represents a failed (non-200) response from an endpoint.
 
-## An example of a Fern specification
+## An example of a Fern definition
 
 ```yml imdb.yml
 service:

@@ -10,7 +10,7 @@ The Fern CLI can generate the following types of artifacts:
 
 ## OpenAPI Compatability
 
-Fern is **fully compatible with OpenAPI.** You can use your existing OpenAPI speification to generate code and documentation with Fern. If you're not a fan of OpenAPI, you can also use Fern's [simpler format](specification/specification.md) to define your API.
+Fern is **fully compatible with OpenAPI.** You can use your existing OpenAPI speification to generate code and documentation with Fern. If you're not a fan of OpenAPI, you can also use Fern's [simpler format](/definitiondefinition.md) to define your API.
 
 ## Customer Showcase
 

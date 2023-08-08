@@ -23,7 +23,7 @@ are some examples of what the Fern compiler can output:
 
 To support the long and growing list of outputs, we've built the Fern Compiler
 to be **modular.** The core compiler is responsible for parsing and validating
-your Fern specification, and producing the intermediate representation.
+your Fern definition, and producing the intermediate representation.
 
 The remaining work is handled by **generators.** A Fern generator is a program
 that takes in an intermediate representation and outputs... something. Generators

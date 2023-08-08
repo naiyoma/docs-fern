@@ -55,7 +55,7 @@ SDK for usage in the browser. It can publish the SDK to npmjs.org (or any other 
 [Source code](https://github.com/fern-api/express-starter)
 
 The Express generator generates types and networking logic for your Express server. This saves you time
-and add compile-time safety that you are serving the exact API that you specified in your Fern specification.
+and add compile-time safety that you are serving the exact API that you specified in your Fern definition.
 
 ⚠️ Make sure to enable `allowSyntheticDefaultImports` in your `tsconfig.json` when using this generator.
 

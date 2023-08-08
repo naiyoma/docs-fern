@@ -17,7 +17,7 @@ Let's walk through the [Fern FastAPI Starter](https://github.com/fern-api/fastap
 
 ### Step 1: Define the API
 
-```yaml fern/api/specification/imdb.yml
+```yaml fern/api/definition/imdb.yml
 service:
   auth: false
   base-path: /movies

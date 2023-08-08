@@ -2,14 +2,14 @@
 <img src="images/standards-xkcd.png" alt="how standards proliferate comic from XKCD">
 </a>
 
-We built the Fern specification from the ground up to address our dissatisfaction with the OpenAPI specification.
+We built the Fern definition from the ground up to address our dissatisfaction with the OpenAPI specification.
 
-Despite being a different format for describing APIs, **you are never locked in to using the Fern spec.** It's easy and free to convert a Fern spec to an OpenAPI spec.
+Despite being a different format for describing APIs, **you are never locked in to using the Fern definition.** It's easy and free to convert a Fern definition to an OpenAPI spec.
 
-**TL;DR: The Fern spec differs from the OpenAPI spec in these areas:**
+**TL;DR: The Fern definition differs from the OpenAPI spec in these areas:**
 
 - [Simplicity](#simplicity)
-- [New features in specification](#new-features-in-specification)
+- [New features in definition](#new-features-in-definition)
 - [Quality of code generation](#quality-of-code-generation)
 - [Focus on server-side API development](#focus-on-server-side-api-development)
 - [Change management](#change-management)
@@ -17,12 +17,12 @@ Despite being a different format for describing APIs, **you are never locked in 
 
 ## Simplicity
 
-The Fern spec was built to be **easy to read and write.** Here are some
+The Fern definition was built to be **easy to read and write.** Here are some
 examples.
 
 ### Example: Map
 
-Here's how you'd define a simple string-to-string dictionary in a Fern spec:
+Here's how you'd define a simple string-to-string dictionary in a Fern definition:
 
 ```yaml Fern example
 map<string, string>
@@ -38,7 +38,7 @@ additionalProperties:
 
 ### Example: Discriminated union
 
-Here's how you might define an `Animal` union type in a Fern spec:
+Here's how you might define an `Animal` union type in a Fern definition:
 
 ```yaml Fern example
 Animal:
@@ -63,7 +63,7 @@ Cat:
     hunts: boolean
 ```
 
-In an OpenAP spec:
+In an OpenAPI spec:
 
 ```json OpenAPI example
 Animal:
@@ -104,7 +104,7 @@ Cat:
         type: boolean
 ```
 
-## New features in specification
+## New features in definition
 
 As we continue to build Fern, our ability to control the format is invaluable.
 For example, we're adding support for asynchronous / bi-directional protocols

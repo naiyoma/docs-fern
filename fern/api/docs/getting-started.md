@@ -4,9 +4,13 @@
 npm install -g fern-api
 ```
 
+### Already have an OpenAPI spec?
+
+Import your OpenAPI spec into Fern [here](./spec/openapi).
+
 ### The `fern/` directory
 
-The `fern/` directory contains your API definition. This generally lives in your
+The `fern/` directory contains your Fern configuration. This generally lives in your
 backend repo, but you can also have an independent repo dedicated to your API (like [Seam's](https://github.com/seamapi/fern-config)).
 
 In the root of your repo, run:
@@ -26,16 +30,6 @@ fern/
     ├─ api.yml  # API-level configuration
     └─ imdb.yml # endpoints, types, and errors
 ```
-
-### Already have an OpenAPI spec?
-
-You can import an existing OpenAPI spec by running
-
-```bash
-fern init --openapi /path/to/openapi.yml
-```
-
-More information [here](./spec/openapi).
 
 ### Generating an SDK
 
@@ -98,11 +92,11 @@ errors:
 
 </Accordion>
 
-Your **Fern specification** is a set of YAML files that describe your API. You can
-learn more about this in the [Define your API](./specification/specification) section.
+Your **Fern definition** is a set of YAML files that describe your API. You can
+learn more about this in the [Define your API](./definition/definition) section.
 
 ### Running the Fern compiler
 
-The Fern compiler takes your Fern specification and generates useful outputs, like
+The Fern compiler takes your Fern definition and generates useful outputs, like
 SDKs. You can learn more about configuring outputs in the [Compiler](./compiler/generators)
 section.

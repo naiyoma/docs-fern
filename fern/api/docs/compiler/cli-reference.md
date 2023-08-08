@@ -19,6 +19,24 @@ By default, Fern will delete the container after running. To keep the container 
 
 `fern check` will validate that your API is valid.
 
+## `fern write-definition`
+
+`fern write-definition` will convert your OpenAPI spec into a Fern definition. You'll see a new folder called `definition` created.
+
+```
+fern/
+├─ fern.config.json
+└─ api/
+  ├─ generators.yml
+  └─ openapi/
+    └─ openapi.json
+    └─ definition/ <--- your Fern definition
+        └─ api.yml
+        └─ __package__.yml
+```
+
+When you have an `openapi` folder and a `definition` folder, Fern defaults to reading your OpenAPI spec. Remove the `openapi` folder if you'd like to use generators with your Fern definition.
+
 ## `fern upgrade`
 
 `fern upgrade` will upgrade your compiler version in `fern.config.json` to the

@@ -260,7 +260,9 @@ You can learn more about how to define errors on the [Errors](./errors) page.
 
 When you declare an example, you can also specify some examples of how that
 endpoint might be used. These are used by the compiler to enhance the generated
-outputs (e.g., examples in the generated Postman collection).
+outputs. Examples will show up as comments in your SDKs, API documentation, and Postman collection.
+
+You may add examples for endpoints, types, and errors.
 
 ```yaml user.yml
 service:
@@ -292,6 +294,60 @@ types:
 errors:
   UserNotFoundError:
     status-code: 404
+```
+
+If you're adding an example to an endpoint and the type already has an example, you can reference it using `$`.
+
+```yaml
+service:
+  auth: true
+  base-path: /address
+  endpoints:
+    create:
+      method: POST
+      path: ""
+      request: CreateAddress
+      response: Address
+      examples:
+        - request: $CreateAddress.WhiteHouse
+          response:
+            body: $Address.WhiteHouseWithID
+
+  CreateAddress:
+    properties:
+      street1: string
+      street2: optional<string>
+      city: string
+      state: string
+      postalCode: string
+      country: string
+      isResidential: boolean
+    examples:
+      - name: WhiteHouse
+        value:
+          street1: 1600 Pennsylvania Avenue NW
+          city: Washington DC
+          state: Washington DC
+          postalCode: "20500"
+          country: US
+          isResidential: true
+
+  Address:
+    extends: CreateAddress
+    properties:
+      id:
+        type: uuid
+        docs: The unique identifier for the address.
+    examples:
+      - name: WhiteHouseWithID
+        value:
+          id: 65ce514c-41e3-11ee-be56-0242ac120002
+          street1: 1600 Pennsylvania Avenue NW
+          city: Washington DC
+          state: Washington DC
+          postalCode: "20500"
+          country: US
+          isResidential: true
 ```
 
 Examples contain all the information about the endpoint call, including

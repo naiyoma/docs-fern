@@ -34,6 +34,14 @@ navigation:
         path: ./definition/api-yml.md
       - page: Packages
         path: ./definition/packages.md
+  - section: Documenting your API
+    contents:
+      - page: Fern docs
+        path: ./documentation/overview.md
+      - page: docs.yml
+        path: ./documentation/docs-yml.md
+      - page: Custom domain
+        path: ./documentation/custom-domain.md
   - section: Using OpenAPI
     contents:
       - page: Importing OpenAPI
@@ -58,10 +66,17 @@ navigation:
         path: ./advanced/multiple-apis.md
       - page: API Dependencies
         path: ./advanced/depending-on-other-apis.md
+navbar-links:
+  - type: secondary
+    text: Get support
+    url: https://discord.com/invite/JkkXumPzcG
+  - type: primary
+    text: ⭐ Star on GitHub
+    url: https://github.com/fern-api/fern
 colors:
   accentPrimary: "#a6d388"
 logo:
-  path: ./images/logo.svg
-  # height: 40
+  path: ./images/logo.png
+  height: 70
   href: https://buildwithfern.com?utm_source=fern-docs&utm_medium=logo
 favicon: ./images/favicon.png

@@ -165,6 +165,16 @@ This corresponds to a JSON object like this:
 }
 ```
 
+You can also have a union without a discriminant.
+
+```
+MyUnion: 
+  discriminated: false
+  union: 
+    - string
+    - integer
+```
+
 ### Documentation
 
 You can add documentation for types. These docs are passed into the compiler,

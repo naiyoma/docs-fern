@@ -77,6 +77,6 @@ colors:
   accentPrimary: "#a6d388"
 logo:
   path: ./images/logo.png
-  height: 70
+  height: 60
   href: https://buildwithfern.com?utm_source=fern-docs&utm_medium=logo
 favicon: ./images/favicon.png

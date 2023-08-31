@@ -30,7 +30,7 @@ favicon: ./images/favicon.png
 
 ## Title
 
-The <title> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. The title is required. The contents of a page title is very important for search engine optimization (SEO). [Read more.](https://www.w3schools.com/tags/tag_title.asp)
+The `<title>` tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. The title is required. The contents of a page title is very important for search engine optimization (SEO). [Read more.](https://www.w3schools.com/tags/tag_title.asp)
 
 ## Navigation
 
@@ -44,7 +44,7 @@ A key benefit of using Fern Docs is that you get your API Reference with just on
 
 Having easy-to-use navigation is important for any documentation web site. In `navbar-links`, you may specify a list of links.
 
-```
+```yaml
 navbar-links:
   - type: secondary
     text: Contact support
@@ -77,7 +77,7 @@ You may specify a primary accent color using the [Hexadecimal color](https://www
 - to underline hyperlinks
 - the next and previous page navigation buttons
 
-```
+```yaml
 colors:
   accentPrimary: "#a6d388"
 ```
@@ -86,7 +86,7 @@ colors:
 
 Defines parameters for the website's logo display.
 
-```
+```yaml
 logo:
   path: ./images/logo.png
   height: 70

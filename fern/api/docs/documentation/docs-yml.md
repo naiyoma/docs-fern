@@ -9,8 +9,6 @@ navigation:
         path: ./intro.md
       - page: Authentication
         path: ./auth.md
-      - page: Versioning
-        path: ./versioning.md
   - api: API Reference
 navbar-links:
   - type: secondary
@@ -23,7 +21,7 @@ colors:
   accentPrimary: "#a6d388"
 logo:
   path: ./images/logo.png
-  height: 70
+  height: 60
   href: https://example.com?utm_source=documentation&utm_medium=logo
 favicon: ./images/favicon.png
 ```
@@ -35,6 +33,99 @@ The `<title>` tag defines the title of the document. The title must be text-only
 ## Navigation
 
 The navigation organizes your documentation in the nav bar. Each section has a title and a list of contents. Contents contain a page name and a file path. The supported file types are `.md` or `.mdx`.
+
+Let's look at a basic navigation configuration. Here we have two sections, the first is called `Introduction` that has a single page `My Page` and the second is API Reference.
+
+```yaml
+navigation: 
+  - section: Introduction
+    contents: 
+      - page: My Page
+        pagh: my-page.mdx
+  - api: API Reference
+```
+
+### Tabs
+
+Within the navigation you can add `tabs`. Tabs are used to group content together. Let's add a new tab so that we can include `Help Center` content in addition to our API Reference. Each tab has a `title` and `icon`. [Browse the icons available](https://fontawesome.com/search) from FontAwesome.
+
+```yaml
+tabs: 
+  api: 
+    title: API Reference
+    icon: puzzle
+  help:
+    title: Help Center
+    icon: home
+    
+ navigation: 
+  - tab: api
+     contents: 
+        - section: Introduction
+           contents: 
+              - page: My Page
+                 path: my-page.mdx
+        - api: API Reference   
+   - tab: help
+      contents: 
+         - section: Help Center
+           contents: 
+              - page: Contact Us
+                 path: contact-us.mdx
+```
+
+### Versions
+
+If you have multiple versions of your documentation, you can introduce a dropdown version selector by specifying the versions and their availability.
+
+![A dropdown of the available versions](../images/versions.png)
+
+To add a version, specify the `display-name` which be visible to users and `path` which is a file that must be in a folder called `versions`.
+
+```yaml
+# fern/docs.yml
+versions: 
+  - display-name: v1.0
+      path: v1-0.yml # has to be in a `versions` folder
+  - display-name: v1.1
+      path: v1-1.yml
+```
+
+```yaml
+# fern/versions/v1-0.yml
+navigation: 
+  - section: Introduction
+    contents: 
+      - page: My Page
+        pagh: my-page.mdx
+  - api: API Reference
+```
+
+```yaml
+# fern/versions/v1-1.yml
+tabs: 
+  api: 
+    title: API Reference
+    icon: puzzle
+  help:
+    title: Help Center
+    icon: home
+    
+ navigation: 
+  - tab: api
+     contents: 
+        - section: Introduction
+           contents: 
+              - page: My Page
+                 path: my-page.mdx
+        - api: API Reference   
+   - tab: help
+      contents: 
+         - section: Help Center
+           contents: 
+              - page: Contact Us
+                 path: contact-us.mdx
+```
 
 ## API Reference
 
@@ -66,7 +157,9 @@ A link has text which is displayed to the user.
 
 A link has a URL which a user is directed to. By default, URLs open in a new browser tab.
 
+<Callout intent="tip">
 Tip: you may want to use a trackable link for the URLs, such as [UTM parameters](https://en.wikipedia.org/wiki/UTM_parameters).
+<Callout>
 
 ## Colors
 
@@ -89,7 +182,7 @@ Defines parameters for the website's logo display.
 ```yaml
 logo:
   path: ./images/logo.png
-  height: 70
+  height: 60
   href: https://example.com?utm_source=documentation&utm_medium=logo
 ```
 
@@ -108,3 +201,5 @@ logo:
 ## Favicon
 
 Specifies the path to a favicon image, which is typically displayed in a browser tab or bookmark. This small but crucial customization enhances user experience by allowing the website to have a unique and recognizable icon. Supported file types are `.png` and `.ico`.
+
+<!-- markdownlint-disable-file MD033 MD041-->

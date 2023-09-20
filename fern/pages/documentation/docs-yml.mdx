@@ -6,9 +6,9 @@ navigation:
   - section: Home
     contents:
       - page: Introduction
-        path: ./intro.md
+        path: ./intro.mdx
       - page: Authentication
-        path: ./auth.md
+        path: ./auth.mdx
   - api: API Reference
 navbar-links:
   - type: secondary
@@ -32,7 +32,7 @@ The `<title>` tag defines the title of the document. The title must be text-only
 
 ## Navigation
 
-The navigation organizes your documentation in the nav bar. Each section has a title and a list of contents. Contents contain a page name and a file path. The supported file types are `.md` or `.mdx`.
+The navigation organizes your documentation in the nav bar. Each section has a title and a list of contents. Contents contain a page name and a file path. The supported file types are `.mdx` or `.mdxx`.
 
 Let's look at a basic navigation configuration. Here we have two sections, the first is called `Introduction` that has a single page `My Page` and the second is API Reference.
 
@@ -41,7 +41,7 @@ navigation:
   - section: Introduction
     contents: 
       - page: My Page
-        pagh: my-page.mdx
+        path: my-page.mdxx
   - api: API Reference
 ```
 
@@ -64,14 +64,14 @@ tabs:
         - section: Introduction
            contents: 
               - page: My Page
-                 path: my-page.mdx
+                 path: my-page.mdxx
         - api: API Reference   
    - tab: help
       contents: 
          - section: Help Center
            contents: 
               - page: Contact Us
-                 path: contact-us.mdx
+                 path: contact-us.mdxx
 ```
 
 ### Versions
@@ -97,7 +97,7 @@ navigation:
   - section: Introduction
     contents: 
       - page: My Page
-        pagh: my-page.mdx
+        path: my-page.mdxx
   - api: API Reference
 ```
 
@@ -117,14 +117,14 @@ tabs:
         - section: Introduction
            contents: 
               - page: My Page
-                 path: my-page.mdx
+                 path: my-page.mdxx
         - api: API Reference   
    - tab: help
       contents: 
          - section: Help Center
            contents: 
               - page: Contact Us
-                 path: contact-us.mdx
+                 path: contact-us.mdxx
 ```
 
 ## API Reference
@@ -201,5 +201,3 @@ logo:
 ## Favicon
 
 Specifies the path to a favicon image, which is typically displayed in a browser tab or bookmark. This small but crucial customization enhances user experience by allowing the website to have a unique and recognizable icon. Supported file types are `.png` and `.ico`.
-
-<!-- markdownlint-disable-file MD033 MD041-->

@@ -1,5 +1,5 @@
 <a href="https://xkcd.com/927" target="_blank">
-<img src="images/standards-xkcd.png" alt="how standards proliferate comic from XKCD">
+  <img src="images/standards-xkcd.png" alt="how standards proliferate comic from XKCD">
 </a>
 
 We built the Fern definition from the ground up to address our dissatisfaction with the OpenAPI specification.
@@ -9,6 +9,8 @@ Despite being a different format for describing APIs, **you are never locked in 
 **TL;DR: The Fern definition differs from the OpenAPI spec in these areas:**
 
 - [Simplicity](#simplicity)
+  - [Example: Map](#example-map)
+  - [Example: Discriminated union](#example-discriminated-union)
 - [New features in definition](#new-features-in-definition)
 - [Quality of code generation](#quality-of-code-generation)
 - [Focus on server-side API development](#focus-on-server-side-api-development)
@@ -177,7 +179,7 @@ our compiler of how you can remediate.
 ## Cloud-based code generation and publishing
 
 Fern runs your code generation in the cloud by default. This improves reliability as we
-run the generators in consistent, containerized environments. You run [`fern generate`](cli-reference.md),
+run the generators in consistent, containerized environments. You run [`fern generate`](cli-reference.mdx),
 and _it just works_. You don't need Java installed on your computer to
 generate a Java SDK.
 

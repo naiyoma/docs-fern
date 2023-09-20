@@ -1,71 +1,74 @@
+instances:
+  - url: staging.docs.buildwithfern.com
+
 title: Fern | Docs
 navigation:
   - section: Home
     contents:
       - page: Introduction
-        path: ./intro.md
+        path: ./pages/intro.mdx
       - page: Why Fern?
-        path: ./why-fern.md
+        path: ./pages/why-fern.mdx
       - page: Comparison with OpenAPI
-        path: ./comparison-with-openapi.md
+        path: ./pages/comparison-with-openapi.mdx
       - page: Getting Started
-        path: ./getting-started.md
+        path: ./pages/getting-started.mdx
   - section: Showcase
     contents:
       - page: TypeScript SDK
-        path: ./showcase/typescript-sdk.md
+        path: ./pages/showcase/typescript-sdk.mdx
       - page: FastAPI
-        path: ./showcase/fastapi.md
+        path: ./pages/showcase/fastapi.mdx
       - page: Express
-        path: ./showcase/express.md
+        path: ./pages/showcase/express.mdx
   - section: Defining your API
     contents:
       - page: Fern definition
-        path: ./definition/definition.md
+        path: ./pages/definition/definition.mdx
       - page: Types
-        path: ./definition/types.md
+        path: ./pages/definition/types.mdx
       - page: Endpoints
-        path: ./definition/endpoints.md
+        path: ./pages/definition/endpoints.mdx
       - page: Errors
-        path: ./definition/errors.md
+        path: ./pages/definition/errors.mdx
       - page: Imports
-        path: ./definition/imports.md
+        path: ./pages/definition/imports.mdx
       - page: api.yml
-        path: ./definition/api-yml.md
+        path: ./pages/definition/api-yml.mdx
       - page: Packages
-        path: ./definition/packages.md
+        path: ./pages/definition/packages.mdx
   - section: Documenting your API
     contents:
       - page: Fern docs
-        path: ./documentation/overview.md
+        path: ./pages/documentation/overview.mdx
       - page: docs.yml
-        path: ./documentation/docs-yml.md
+        path: ./pages/documentation/docs-yml.mdx
       - page: Custom domain
-        path: ./documentation/custom-domain.md
+        path: ./pages/documentation/custom-domain.mdx
   - section: Using OpenAPI
     contents:
       - page: Importing OpenAPI
-        path: ./spec/openapi.md
+        path: ./pages/spec/openapi.mdx
       - page: Using Extensions
-        path: ./spec/extensions.md
+        path: ./pages/spec/extensions.mdx
   - section: Compiler
     contents:
       - page: fern generate
-        path: ./compiler/fern-generate.md
+        path: ./pages/compiler/fern-generate.mdx
       - page: Generators
-        path: ./compiler/generators.md
+        path: ./pages/compiler/generators.mdx
       - page: fern.config.json
-        path: ./compiler/fern-config-json.md
+        path: ./pages/compiler/fern-config-json.mdx
       - page: CLI Reference
-        path: ./compiler/cli-reference.md
+        path: ./pages/compiler/cli-reference.mdx
   - section: Advanced Features
     contents:
       - page: Audiences
-        path: ./advanced/audiences.md
+        path: ./pages/advanced/audiences.mdx
       - page: Multiple APIs
-        path: ./advanced/multiple-apis.md
+        path: ./pages/advanced/multiple-apis.mdx
       - page: API Dependencies
-        path: ./advanced/depending-on-other-apis.md
+        path: ./pages/advanced/depending-on-other-apis.mdx
 navbar-links:
   - type: secondary
     text: Get support
@@ -76,7 +79,7 @@ navbar-links:
 colors:
   accentPrimary: "#a6d388"
 logo:
-  path: ./images/logo.png
+  dark: ./images/logo.png
   height: 60
   href: https://buildwithfern.com?utm_source=fern-docs&utm_medium=logo
 favicon: ./images/favicon.png

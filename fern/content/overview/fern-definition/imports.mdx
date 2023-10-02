@@ -1,9 +1,14 @@
-```yaml person.yml
+Imports allow you to reference types and errors from other files
+
+<CodeBlock title="persion.yml">
+```yaml
 types:
   Person: ...
 ```
+</CodeBlock>
 
-```yaml family.yml
+<CodeBlock title="family.yml">
+```yaml
 imports:
   person: ./path/to/person.yml
 types:
@@ -11,5 +16,6 @@ types:
     properties:
       people: list<person.Person> # use an imported type
 ```
+</CodeBlock>
 
 Note that you can only import files that exist in your Fern definition (i.e., in the same `definition/` folder).

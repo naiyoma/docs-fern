@@ -1,3 +1,5 @@
+A Fern Definition is a set of YAML files that describe your API.
+
 Each **Fern definition** file may define:
 
 - **[Custom types](/definition/types)**. Use **custom types** to build your data model.
@@ -6,7 +8,8 @@ Each **Fern definition** file may define:
 
 ## An example of a Fern definition
 
-```yml imdb.yml
+<CodeBlock title="imdb.yml">
+```yml 
 service:
   auth: false
   base-path: /movies
@@ -56,3 +59,4 @@ errors:
     http:
       statusCode: 401
 ```
+</CodeBlock>

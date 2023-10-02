@@ -1,3 +1,5 @@
+Types describe the data model of your API.
+
 ## Built-in types
 
 - **`string`**
@@ -13,15 +15,7 @@
 - **`set`** _e.g., set\<string\>_
 - **`map`** _e.g., map\<string, integer\>_
 - **`optional`** _e.g., optional\<string\>_
-
-**`unknown`**
-
-Fern comes with a special type `unknown`, which signifies that the type cannot
-be represented in Fern. Often, this is because the value has a dynamic shape
-(e.g., user-supplied data).
-
-In cases where you use `unknown`, Fern will assume the value is optional. There's
-no difference between `unknown` and `optional<unknown>`.
+- **`unknown`** _Represents arbitrary JSON._
 
 ## Custom types
 
@@ -168,9 +162,9 @@ This corresponds to a JSON object like this:
 You can also have a union without a discriminant.
 
 ```
-MyUnion: 
+MyUnion:
   discriminated: false
-  union: 
+  union:
     - string
     - integer
 ```

@@ -1,5 +1,7 @@
 groups:
   production:
+    audiences: 
+      - external
     generators:
       - name: fernapi/fern-typescript-sdk
         version: 0.7.2

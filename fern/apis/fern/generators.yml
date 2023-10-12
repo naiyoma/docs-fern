@@ -14,7 +14,7 @@ groups:
         github:
           repository: fern-api/node-sdk
       - name: fernapi/fern-python-sdk
-        version: 0.5.0-rc2-21-g2d0f8ad2
+        version: 0.6.0
         output:
           location: pypi
           package-name: fern-api

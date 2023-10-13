@@ -84,7 +84,8 @@ navigation:
         api-name: fern
         audiences: 
           - external
-        snippets: 
+        snippets:
+          python: fern-api
 
 navbar-links:
   - type: secondary

@@ -1,8 +1,8 @@
-Every Fern Docs web site has a special file called `docs.yml`, which includes all the docs-wide configuration.
+Every Fern Docs website has a special configuation file called `docs.yml`.
 
 <CodeBlock title="docs.yml">
 ```yaml
-title: Fern | Docs
+title: Example | Docs
 navigation:
   - section: Home
     contents:
@@ -23,31 +23,116 @@ colors:
 logo:
   path: ./images/logo.png
   height: 60
-  href: https://example.com?utm_source=documentation&utm_medium=logo
+  href: https://example.com
 favicon: ./images/favicon.png
 ```
 </CodeBlock>
 
-### Title
+### Title 
 
-The `<title>` tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. The title is required. The contents of a page title is very important for search engine optimization (SEO). [Read more.](https://www.w3schools.com/tags/tag_title.asp)
+The `<title>` tag defines the title of the document. The title must be text-only, and is shown within the browser's tab. The content of a page title is important for search engine optimization (SEO). [Read more.](https://www.w3schools.com/tags/tag_title.asp)
 
 ### Navigation
 
-The navigation organizes your documentation in the nav bar. Each section has a title and a list of contents. Contents contain a page name and a file path. The supported file types are `.md` or `.mdx`.
+The navigation organizes your documentation in the left-side nav bar. Each section has a title and a list of contents. Contents contain a page name and a file path. The supported file types are `.md` or `.mdx`.
 
 Let's look at a basic navigation configuration. Here we have two sections, the first is called `Introduction` that has a single page `My Page` and the second is API Reference.
 
-<CodeBlock title="docs.yml">
+<CodeBlock title="Example Navigation Config">
 ```yaml
 navigation: 
   - section: Introduction
     contents: 
       - page: My Page
-        path: my-page.mdxx
+        path: my-page.mdx
   - api: API Reference
 ```
 </CodeBlock>
+
+### API Reference
+
+A key benefit of using Fern Docs is that you get your API Reference with just one line. Add `- api: API Reference` and Fern will take care of the rest! You'll see your endpoints, types, and errors automatically populated from your API definition. 
+
+### Navigation Bar Links
+
+If you have links that you want to be easily accessible, you can specify a list of links in `navbar-links`. These links will appear as buttons in the top right of your documentation website.
+
+<CodeBlock title="docs.yml">
+```yaml
+navbar-links:
+  - type: secondary
+    text: Contact support
+    url: https://example.com/support
+  - type: primary
+    text: Login
+    url: https://example.com/login
+```
+</CodeBlock>
+
+#### Link type
+
+A link can be `primary` or `secondary`. Primary links are designed to stand out and indicate that they are clickable with an arrow `>`. You can have one primary link.
+
+#### Link text
+
+A link has text which is displayed to the user.
+
+#### Link url
+
+A link has a URL which a user is directed to. By default, URLs open in a new browser tab.
+
+You may want to use a trackable link in your URL. For example, if using [UTM parameters](https://en.wikipedia.org/wiki/UTM_parameters), instead of `www.example.com/login`, set the URL to `www.example.com/login?utm_source=docs&utm_medium=navbar`.
+
+### Colors
+
+You may specify a primary accent color using the [Hexadecimal color](https://www.w3schools.com/colors/colors_hexadecimal.asp). The primary accent color is used in many places, including:
+
+- to indicate the page a user is on within the navigation
+- the background of a primary link button
+- to underline hyperlinks
+- the next and previous page navigation buttons
+
+<CodeBlock title="docs.yml">
+```yaml
+colors:
+  accentPrimary: "#a6d388"
+```
+</CodeBlock>
+
+### Logo
+
+You can add your logo that will display in the top left of your documentation website.
+
+<CodeBlock title="docs.yml">
+```yaml
+logo:
+  path: ./images/logo.png
+  height: 60
+  href: https://example.com
+```
+</CodeBlock>
+
+#### Logo path
+
+`path` specifies the image file location. The supported file types are `.png` or `.svg`.
+
+#### Logo height
+
+`height` sets the logo's height in pixels.
+
+#### Logo href
+
+`href` provides a hyperlink for the logo, often used 
+to point to the website homepage. When clicked, the user will be redirected to this link.
+
+### Favicon
+
+Specifies the path to a favicon image, which is typically displayed in a 
+browser tab or bookmark. Supported file types are `.png` and `.ico`.
+
+## Advanced Features
+
+The following configuration options are optional and allow you to further personalize your documentation website.
 
 ### Tabs
 
@@ -69,14 +154,14 @@ tabs:
         - section: Introduction
            contents: 
               - page: My Page
-                 path: my-page.mdxx
+                 path: my-page.mdx
         - api: API Reference   
    - tab: help
       contents: 
          - section: Help Center
            contents: 
               - page: Contact Us
-                 path: contact-us.mdxx
+                 path: contact-us.mdx
 ```
 </CodeBlock>
 
@@ -104,7 +189,7 @@ navigation:
   - section: Introduction
     contents: 
       - page: My Page
-        path: my-page.mdxx
+        path: my-page.mdx
   - api: API Reference
 ```
 </CodeBlock>
@@ -125,98 +210,13 @@ tabs:
         - section: Introduction
            contents: 
               - page: My Page
-                 path: my-page.mdxx
+                 path: my-page.mdx
         - api: API Reference   
    - tab: help
       contents: 
          - section: Help Center
            contents: 
               - page: Contact Us
-                 path: contact-us.mdxx
+                 path: contact-us.mdx
 ```
 </CodeBlock>
-
-## API Reference
-
-A key benefit of using Fern Docs is that you get your API Reference with just one line. Add `- api: API Reference` and Fern will take care of the rest! You'll see your endpoints, types, and errors populated from your API definition automatically.
-
-## Navigation Bar
-
-Having easy-to-use navigation is important for any documentation web site. In `navbar-links`, you may specify a list of links.
-
-<CodeBlock title="docs.yml">
-```yaml
-navbar-links:
-  - type: secondary
-    text: Contact support
-    url: https://example.com/support
-  - type: primary
-    text: Login
-    url: https://example.com/login
-```
-</CodeBlock>
-
-### Link type
-
-A link can be `primary` or `secondary`. Primary links are designed to stand out and indicate that they are clickable with an arrow `>`. You may have one primary link.
-
-### Link text
-
-A link has text which is displayed to the user.
-
-### Link URL
-
-A link has a URL which a user is directed to. By default, URLs open in a new browser tab.
-
-<Callout intent="tip">
-Tip: you may want to use a trackable link for the URLs, such as [UTM parameters](https://en.wikipedia.org/wiki/UTM_parameters).
-</Callout>
-
-## Colors
-
-You may specify a primary accent color using the [Hexadecimal color](https://www.w3schools.com/colors/colors_hexadecimal.asp). The primary accent color is used in many places, including:
-
-- to indicate the page a user is on within the navbar
-- the background of a primary link button
-- to underline hyperlinks
-- the next and previous page navigation buttons
-
-<CodeBlock title="docs.yml">
-```yaml
-colors:
-  accentPrimary: "#a6d388"
-```
-</CodeBlock>
-
-## Logo
-
-Defines parameters for the website's logo display.
-
-<CodeBlock title="docs.yml">
-```yaml
-logo:
-  path: ./images/logo.png
-  height: 60
-  href: https://example.com?utm_source=documentation&utm_medium=logo
-```
-</CodeBlock>
-
-### Path
-
-`path` specifies the image file location. Supported logo file types include `.png` and `.svg`.
-
-### Height
-
-`height` sets the logo's height in pixels.
-
-### Href
-
-`href` provides a hyperlink for the logo, often used 
-to point to the website homepage.
-
-## Favicon
-
-Specifies the path to a favicon image, which is typically displayed in a 
-browser tab or bookmark. This small but crucial customization enhances user experience 
-by allowing the website to have a unique and recognizable icon. 
-Supported file types are `.png` and `.ico`.

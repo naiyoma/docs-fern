@@ -6,19 +6,19 @@
 
 Latest version: https://fern.docs.buildwithfern.com/
 
-This repository contains the conceptual documentation for [Fern](https://buildwithfern.com), the open source toolkit for designing, building, and consuming REST APIs. The [Fern documentation website](https://buildwithfern.com/docs/intro) will be built on Fern's own technology available through the Fern CLI.
+This repository contains the documentation for [Fern](https://buildwithfern.com), the open source toolkit for building REST APIs. Our documentation is built on Fern's documentation product.
 
-Issues pertaining to documentation are tracked in this repository. If you feel there is anything wrong in the documentation, or we are missing something important, feel free to open up an issue and we'd be happy to discuss it!
+Issues pertaining to documentation are tracked in this repository. If you feel there is anything wrong in the documentation, or we are missing something, open an issue. We're happy to discuss improvements!
 
 ## Project Structure
 
-This project is built on top of Fern's own documentation generation tooling. This means that the content lives in its own `./fern` directory.
+The content lives in the `./fern` directory.
 
-The structure of the documentation, including navigation elements, is outlined in `fern/api/docs/docs.yml`. These are all based on Fern's own built-in docs definitions, available in the main repository.
+The structure of the documentation, including navigation, is outlined in `fern/docs.yml`.
 
 ## Contributions
 
 We welcome contributions to to help complete the documentation and make it more elaborate.
 
 - For smaller contributions, e.g., grammatical corrections or smaller fixes, feel free to open a pull request directly.
-- If your contribution is more sizable, e.g., documenting a new feature, please open an issue before starting your work, so we have a chance to review and ask any questions beforehand.
+- If your contribution is more sizable, e.g., documenting a new feature, please open an issue before starting your work, so we have a chance to review and ask questions beforehand.

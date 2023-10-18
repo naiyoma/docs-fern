@@ -1,6 +1,5 @@
 instances:
   - url: fern.docs.buildwithfern.com
-  - url: fern-staging.docs.buildwithfern.com
 
 title: Fern | Documentation
 
@@ -13,29 +12,31 @@ tabs:
     icon: "fa-solid fa-code"
   docs:
     display-name: Docs
-    icon: "fa-solid fa-cube"
+    icon: "fa-solid fa-book"
   backend:
     display-name: Backend boilerplate
-    icon: "fa-solid fa-cube"
+    icon: "fa-solid fa-server"
   api:
     display-name: API Reference
-    icon: "fa-solid fa-cube"
+    icon: "fa-solid fa-file-contract"
 
 navigation:
   - tab: overview
     layout: 
-      - section: Home
+      - section: Welcome
         contents:
           - page: Introduction
-            path: ./content/overview/home/introduction.mdx
-          - page: Getting Started
-            path: ./content/overview/home/getting-started.mdx
+            path: ./content/overview/welcome/introduction.mdx
+          - page: Quickstart
+            path: ./content/overview/welcome/quickstart.mdx
       - section: OpenAPI
         contents:
           - page: Importing OpenAPI
-            path: ./content/overview/openapi/openapi.mdx
-          - page: Using Extensions
+            path: ./content/overview/openapi/import.mdx
+          - page: OpenAPI Extensions
             path: ./content/overview/openapi/extensions.mdx
+          - page: Exporting OpenAPI
+            path: ./content/overview/openapi/export.mdx
       - section: Fern Definition
         contents:
           - page: Fern definition
@@ -57,15 +58,19 @@ navigation:
       - section: Generators
         contents: 
           - page: Node
-            path:  ./content/sdks/generators/node-sdk.mdx
+            path: ./content/sdks/generators/node-sdk.mdx
           - page: Browser
-            path:  ./content/sdks/generators/browser-sdk.mdx
+            path: ./content/sdks/generators/browser-sdk.mdx
           - page: Python
-            path:  ./content/sdks/generators/python-sdk.mdx
+            path: ./content/sdks/generators/python-sdk.mdx
           - page: Java
-            path:  ./content/sdks/generators/java-sdk.mdx
+            path: ./content/sdks/generators/java-sdk.mdx
           - page: Go
-            path:  ./content/sdks/generators/go-sdk.mdx
+            path: ./content/sdks/generators/go-sdk.mdx
+          - page: Ruby
+            path: ./content/sdks/generators/ruby-sdk.mdx
+          - page: C#
+            path: ./content/sdks/generators/csharp-sdk.mdx
   - tab: docs
     layout: 
       - section: Overview
@@ -74,6 +79,8 @@ navigation:
             path: ./content/docs/overview/docs-yml.mdx
           - page: Custom domain
             path: ./content/docs/overview/custom-domain.mdx
+          - page: Previews
+            path: ./content/docs/overview/previews.mdx
   - tab: api
     layout: 
       - section: Overview

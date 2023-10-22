@@ -1,5 +1,6 @@
 instances:
   - url: fern.docs.buildwithfern.com
+    custom-domain: https://www.buildwithfern.com/docs
 
 title: Fern | Documentation
 

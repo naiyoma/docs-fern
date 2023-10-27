@@ -1,9 +1,9 @@
-name: ci
+name: fern
 
 on: [push]
 
 jobs:
-  fern-generate-sdks:
+  generate-sdks:
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:

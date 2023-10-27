@@ -104,6 +104,7 @@ navbar-links:
     url: https://github.com/fern-api/fern
 
 logo: 
+  href: https://www.buildwithfern.com
   dark: ./images/logo.png
   height: 30
 background-image: ./images/background.svg

@@ -1,6 +1,6 @@
 name: generate-sdks
 
-on: [push]
+on: push
 
 jobs:
   generate-sdks:

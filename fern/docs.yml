@@ -15,11 +15,14 @@ tabs:
     display-name: Docs
     icon: "fa-solid fa-book"
   backend:
-    display-name: Backend boilerplate
+    display-name: Server boilerplate
     icon: "fa-solid fa-server"
   api:
     display-name: API Reference
     icon: "fa-solid fa-file-contract"
+  api-definition: 
+    display-name: API Definition
+    icon: "fa-solid fa-pen-to-square"
 
 navigation:
   - tab: overview
@@ -27,67 +30,134 @@ navigation:
       - section: Welcome
         contents:
           - page: Introduction
-            path: ./content/overview/welcome/introduction.mdx
+            path: ./pages/welcome/introduction.mdx
+            slug: introduction
           - page: Quickstart
-            path: ./content/overview/welcome/quickstart.mdx
-      - section: OpenAPI
+            path: ./pages/welcome/quickstart.mdx
+            slug: quickstart
+          - page: CLI 
+            path: ./pages/cli/cli-reference.mdx
+            slug: cli-reference #TODO decide whether to add all commands to one page or have a page per command
+  - tab: api-definition
+    layout:          
+      - section: OpenAPI Specification
         contents:
           - page: Importing OpenAPI
-            path: ./content/overview/openapi/import.mdx
+            path: ./pages/openapi/import.mdx
+            slug: openapi/import
           - page: OpenAPI Extensions
-            path: ./content/overview/openapi/extensions.mdx
+            path: ./pages/openapi/extensions.mdx
+            slug: openapi/extensions
           - page: Exporting OpenAPI
-            path: ./content/overview/openapi/export.mdx
+            path: ./pages/openapi/export.mdx
+            slug: openapi/export
       - section: Fern Definition
         contents:
-          - page: Fern definition
-            path: ./content/overview/fern-definition/definition.mdx
+          - page: Overview
+            path: ./pages/fern-definition/definition.mdx
+            slug: fern-definition
           - page: Types
-            path: ./content/overview/fern-definition/types.mdx
+            path: ./pages/fern-definition/types.mdx
+            slug: fern-definition/types
           - page: Endpoints
-            path: ./content/overview/fern-definition/endpoints.mdx
+            path: ./pages/fern-definition/endpoints.mdx
+            slug: fern-definition/endpoints
           - page: Errors
-            path: ./content/overview/fern-definition/errors.mdx
+            path: ./pages/fern-definition/errors.mdx
+            slug: fern-definition/errors
           - page: Imports
-            path: ./content/overview/fern-definition/imports.mdx
-          - page: api.yml
-            path: ./content/overview/fern-definition/api-yml.mdx
+            path: ./pages/fern-definition/imports.mdx
+            slug: fern-definition/imports
+          - page: api.yml reference
+            path: ./pages/fern-definition/api-yml.mdx
+            slug: fern-definition/api-yml-reference
           - page: Packages
-            path: ./content/overview/fern-definition/packages.mdx
+            path: ./pages/fern-definition/packages.mdx
+            slug: fern-definition/packages
   - tab: sdks
     layout: 
       - section: Generators
         contents: 
-          - page: Node
-            path: ./content/sdks/generators/node-sdk.mdx
-          - page: Browser
-            path: ./content/sdks/generators/browser-sdk.mdx
-          - page: Python
-            path: ./content/sdks/generators/python-sdk.mdx
-          - page: Java
-            path: ./content/sdks/generators/java-sdk.mdx
-          - page: Go
-            path: ./content/sdks/generators/go-sdk.mdx
+          - page: TypeScript Node.js SDK
+            path: ./pages/sdks/node-sdk.mdx
+            slug: sdk/typescript-node
+          - page: TypeScript Browser SDK
+            path: ./pages/sdks/browser-sdk.mdx
+            slug: sdk/typescript-browser
+          - page: Python SDK
+            path: ./pages/sdks/python-sdk.mdx
+            slug: sdk/python
+          - page: Java SDK
+            path: ./pages/sdks/java-sdk.mdx
+            slug: sdk/java
+          - page: Go SDK
+            path: ./pages/sdks/go-sdk.mdx
+            slug: sdk/go
           - page: Ruby
-            path: ./content/sdks/generators/ruby-sdk.mdx
+            path: ./pages/sdks/ruby-sdk.mdx
+            slug: sdk/ruby
           - page: C#
-            path: ./content/sdks/generators/csharp-sdk.mdx
+            path: ./pages/sdks/csharp-sdk.mdx
+            slug: sdk/csharp
+          - page: PHP
+            path: ./pages/sdks/php-sdk.mdx
+            slug: sdk/php
   - tab: docs
     layout: 
       - section: Overview
         contents:
-          - page: docs.yml
-            path: ./content/docs/overview/docs-yml.mdx
+          - page: docs.yml reference
+            path: ./pages/docs/docs-yml.mdx
+            slug: docs/docs-yml-reference
           - page: Custom domain
-            path: ./content/docs/overview/custom-domain.mdx
+            path: ./pages/docs/custom-domain.mdx
+            slug: docs/custom-domain
           - page: Previews
-            path: ./content/docs/overview/previews.mdx
+            path: ./pages/docs/previews.mdx
+            slug: docs/previews
+      - section: Component Library
+        contents:
+          - page: Cards
+            path: ./pages/docs/components/card.mdx
+            slug: docs/components/cards
+          - page: Callout 
+            path: ./pages/docs/components/callout.mdx
+            slug: docs/components/callout
+          - page: Icons 
+            path: ./pages/docs/components/icons.mdx
+            slug: docs/components/icons
+  - tab: backend
+    layout: 
+      - section: Server boilerplate
+        contents: 
+          - page: Express.js
+            path: ./pages/server-boilerplate/express.mdx
+            slug: server-boilerplate/express
+          - page: FastAPI
+            path: ./pages/server-boilerplate/fastapi.mdx
+            slug: server-boilerplate/fastapi
+          - page: Spring
+            path: ./pages/server-boilerplate/spring.mdx
+            slug: server-boilerplate/spring      
+          - page: Go
+            path: ./pages/server-boilerplate/go.mdx
+            slug: server-boilerplate/go
+          - page: Ruby on Rails
+            path: ./pages/server-boilerplate/ruby-on-rails.mdx
+            slug: server-boilerplater/ruby-on-rails
+          - page: Flask
+            path: ./pages/server-boilerplate/flask.mdx
+            slug: server-boilerplate/flask  
+          - page: Django
+            path: ./pages/server-boilerplate/django.mdx
+            slug: server-boilerplate/django
   - tab: api
     layout: 
       - section: Overview
         contents: 
           - page: Introduction
-            path: ./content/api/overview/intro.mdx
+            path: ./pages/api/intro.mdx
+            slug: api/intro
       - api: Reference
         api-name: fern
         audiences: 
@@ -96,6 +166,9 @@ navigation:
           python: fern-api
 
 navbar-links:
+  - type: secondary 
+    text: Home 
+    url: https://buildwithfern.com
   - type: secondary
     text: Showcase
     url: https://buildwithfern.com/showcase

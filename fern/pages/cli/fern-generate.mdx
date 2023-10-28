@@ -1,0 +1,8 @@
+## fern generate [--group <group>] [--version <version>] [--local] [--keepDocker] [--docs <instance-url>]
+
+`fern generate` runs the Fern compiler. It first validates your API (by automatically running `fern check`) and then runs the
+generators specified in `generators.yml` and/or `docs.yml`.
+
+If you don't have a `default-group` specified in `generators.yml`, then you must specify a group using the `--group` option.
+
+You can specify a version using the `--version` option. This version string is used when publishing SDKs to registries (e.g. npm, pypi).

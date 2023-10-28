@@ -1,0 +1,22 @@
+## Popular commands
+
+[fern generate](/docs/cli/fern-generate): generate SDKs and docs.
+[fern check](/docs/cli/fern-generate): validate your API definition(s) and Fern configuration.
+[fern add](/docs/cli/fern-add): add a generator to your Fern configuration.
+
+### Running locally
+
+By default, the code generation runs in the cloud. If you want to run it on your local machine, you can use the `--local` option. This will run each generator in a Docker container. 
+
+By default, Fern will delete the container after running. To keep the container around (e.g. to look at the generator's logs), use the `--keepDocker` option.
+
+### Login required
+
+The CLI requires you to login when generating code. You can login when prompted or use the `fern login` command. We require login for a few reasons:
+
+1. **Identify verification**: If you want to publish your SDK to a registry (e.g. npm.buildwithfern.com), mirror code to Github or generate a docs website, Fern needs to make sure that you are authorized to publish to that location.
+
+1. **Support**: If you run into an error, we can proactively reach out and help troubleshoot.
+
+Discuss removing the login requirement on [this GitHub Issue](https://github.com/fern-api/fern/issues/2003)
+

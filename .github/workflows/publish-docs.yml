@@ -1,4 +1,4 @@
-name: fern
+name: publish-docs
 
 on:
   push:

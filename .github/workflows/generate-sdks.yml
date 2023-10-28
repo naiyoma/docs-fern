@@ -1,4 +1,4 @@
-name: fern
+name: generate-sdks
 
 on: [push]
 

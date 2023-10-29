@@ -35,9 +35,29 @@ navigation:
           - page: Quickstart
             path: ./pages/welcome/quickstart.mdx
             slug: quickstart
-          - page: CLI 
-            path: ./pages/cli/cli-reference.mdx
-            slug: cli-reference #TODO decide whether to add all commands to one page or have a page per command
+      - section: CLI
+        contents: 
+          - page: Overview 
+            path: ./pages/cli/overview.mdx
+          - page: fern generate
+            path: ./pages/cli/fern-generate.mdx
+          - page: fern check
+            path: ./pages/cli/fern-check.mdx
+          - page: fern upgrade
+            path: ./pages/cli/fern-upgrade.mdx
+          - page: fern login
+            path: ./pages/cli/fern-login.mdx
+          - page: fern init
+            path: ./pages/cli/fern-init.mdx
+          - page: fern add
+            path: ./pages/cli/fern-add.mdx
+          - page: fern write definition
+            path: ./pages/cli/fern-write-definition.mdx
+          - page: fern register
+            path: ./pages/cli/fern-register.mdx
+          - page: fern format 
+            path: ./pages/cli/fern-format.mdx
+          
   - tab: api-definition
     layout:          
       - section: OpenAPI Specification
@@ -178,7 +198,7 @@ navbar-links:
 
 logo: 
   href: https://www.buildwithfern.com
-  dark: ./images/logo.png
+  dark: ./images/logo-white.png
   height: 30
 background-image: ./images/background.svg
 colors:

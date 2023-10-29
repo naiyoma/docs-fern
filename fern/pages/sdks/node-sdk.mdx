@@ -1,9 +1,7 @@
 [Source code](https://github.com/fern-api/fern-typescript)
-
-The TypeScript Node.js SDK generator outputs a fully functional TypeScript/JavaScript
-SDK for server-side usage. It can publish the SDK to npmjs.org (or any other npm repository).
-
 **Latest version**: `0.7.2`
+
+The TypeScript Node.js SDK generator outputs a fully functional TypeScript/JavaScript SDK for server-side usage. It can publish the SDK to npmjs.org (or any other npm repository).
 
 ## Local
 
@@ -24,7 +22,7 @@ generators:
 
 ## Publish to Internal Package
 
-Publish the generated SDK to the local file system. Available on the Starter plan.
+Publish the generated SDK to a private NPM hosted by Fern. Available on the Starter plan.
 
 <CodeBlock title="generators.yml">
 ```yaml
@@ -41,7 +39,7 @@ generators:
 
 ## Publish to Public Package
 
-Publish the generated SDK to the local file system. Available on the Starter plan.
+Publish the generated SDK to [npmjs.com](https://www.npmjs.com/). Available on the Starter plan.
 
 <CodeBlock title="generators.yml">
 ```yaml
@@ -53,8 +51,26 @@ generators:
         output:
           location: npm
           package-name: imdb # replace with your package name
+          token: ${NPM_TOKEN}
         github:
           repository: imdb/imdb-node # replace imdb with your org & package name
+```
+</CodeBlock>
+
+You can override the registry using the `url` key.
+
+<CodeBlock title="generators.yml">
+```diff
+generators:
+  groups:
+    public:
+      - name: fernapi/fern-typescript-node-sdk
+        version: 0.7.2
+        output:
+          location: npm
+          package-name: imdb # replace with your package name
+          token: ${NPM_TOKEN}
++       url: your-npm-registry.com
 ```
 </CodeBlock>
 
@@ -394,3 +410,4 @@ if (response.ok) {
 }
 ```
 </CodeBlock>
+

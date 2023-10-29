@@ -283,7 +283,21 @@ To find your workspace ID, select the ⓘ icon in the top right of the workspace
 You can always output the generated files to disk. This is helpful for local
 development, or for when you want to quickly introspect the generated files.
 
-```yaml generators.yml
+<CodeBlocks>
+  <CodeBlock title="SDK">
+```yaml
+generators:
+  groups:
+    local:
+      - name: fernapi/fern-typescript-node-sdk
+        version: 0.7.2
+        output: # <---
+          location: local-file-system
+          path: ../../generated/sdk/node
+```
+  </CodeBlock>
+  <CodeBlock title="Server boilerplate">
+```yaml
 groups:
   server:
     generators:
@@ -293,8 +307,10 @@ groups:
           location: local-file-system
           path: ../../app/fern/server
 ```
+  </CodeBlock>
+</CodeBlocks>
 
-## GitHub publishing
+## GitHub Publishing
 
 Fern can publish the generator's output to a GitHub repo. It can be useful to
 have a dedicated repo for an output to track issues and its history over time.

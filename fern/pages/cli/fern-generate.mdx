@@ -1,8 +1,89 @@
-## fern generate [--group <group>] [--version <version>] [--local] [--keepDocker] [--docs <instance-url>]
+Use `fern generate` to run the Fern compiler for creating SDKs or documentation for your API. By default, Fern operates its generators in the cloud. However,for local operations, Docker is your go-to.
 
-`fern generate` runs the Fern compiler. It first validates your API (by automatically running `fern check`) and then runs the
-generators specified in `generators.yml` and/or `docs.yml`.
+## Command Options 
 
-If you don't have a `default-group` specified in `generators.yml`, then you must specify a group using the `--group` option.
+### SDK Generation
 
-You can specify a version using the `--version` option. This version string is used when publishing SDKs to registries (e.g. npm, pypi).
+<CodeBlock title = "Command Syntax">
+```bash
+fern generate [--group <group>] [--version <version>] [--local] [--keepDocker] [--log-level debug]
+```
+</CodeBlock>
+
+### Documentation Generation
+
+<CodeBlock title = "Command Syntax">
+```bash
+fern generate [--docs <instance-url>] [--log-level debug]
+```
+</CodeBlock>
+
+## Options Explained 
+
+### Group
+
+**Type**: `string`
+**Description:** Filter to a specific group within `generators.yml`. Required unless you have a `default-group` specified in `generators.yml`.
+
+**Example:**
+
+```bash
+fern generate --group internal
+```
+
+### Version
+
+**Type**: `string`
+**Description:** Specify a version for SDKs and documentation. Adherance to [semantic versioning](https://semver.org/) is advised.     
+
+**Example**
+```bash
+fern generate --version 2.1.1
+```
+
+### Local
+
+**Requirement**: [Docker Desktop](https://www.docker.com/products/docker-desktop/) must be installed and running on your machine.
+
+**Description**: Use the `--local` option to generate code locally. This downloads the Docker Image and runs it on your machine.
+
+```yaml
+fern generate --local
+```
+
+Running a Docker locally supports outputting files. It does not support publishing to package managers.
+
+### Keep Docker
+
+**Requirement**: Docker Desktop should be ready on your local machine.
+
+**Description**: Use the `--keepDocker` option to keep the Docker container running after the generation is complete. This is useful for debugging.
+
+```yaml
+fern generate --local --keepDocker
+```
+
+### Instance URL 
+
+**Type**: `string`
+
+**Description**: Use the ``instance` option to specify an instance URL to generate documentation for. This is useful if you have multiple instances of your API.
+
+```bash
+fern generate --docs --instance instance your-organization.docs.buildwithfern.com
+```
+
+## Debugging Logs
+
+**Type**: `string`, enum of `debug` | `info` | `warn` | `error`
+
+To see more information about what Fern is doing, use the `--log-level` option. 
+
+```bash
+fern generate --log-level debug 
+```
+
+- **Debug**: Debug messages, informational messages, warnings, and errors are logged. [Most popular]
+- **Error**: Only error messages are logged.
+- **Warn**: Warning messages and above (i.e., warnings and errors) are logged.
+- **info**: Informational messages, warnings, and errors are logged.

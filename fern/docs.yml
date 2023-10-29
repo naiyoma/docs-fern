@@ -43,20 +43,24 @@ navigation:
             path: ./pages/cli/fern-generate.mdx
           - page: fern check
             path: ./pages/cli/fern-check.mdx
-          - page: fern upgrade
-            path: ./pages/cli/fern-upgrade.mdx
-          - page: fern login
-            path: ./pages/cli/fern-login.mdx
+          - page: fern add
+            path: ./pages/cli/fern-add.mdx            
           - page: fern init
             path: ./pages/cli/fern-init.mdx
-          - page: fern add
-            path: ./pages/cli/fern-add.mdx
           - page: fern write definition
             path: ./pages/cli/fern-write-definition.mdx
+          - page: fern upgrade
+            path: ./pages/cli/fern-upgrade.mdx            
+          - page: fern login
+            path: ./pages/cli/fern-login.mdx            
           - page: fern register
             path: ./pages/cli/fern-register.mdx
           - page: fern format 
             path: ./pages/cli/fern-format.mdx
+          - page: fern help 
+            path: ./pages/cli/fern-help.mdx
+          - page: fern version 
+            path: ./pages/cli/fern-version.mdx
           
   - tab: api-definition
     layout:          
@@ -128,56 +132,44 @@ navigation:
         contents:
           - page: docs.yml reference
             path: ./pages/docs/docs-yml.mdx
-            slug: docs/docs-yml-reference
           - page: Custom domain
             path: ./pages/docs/custom-domain.mdx
-            slug: docs/custom-domain
           - page: Previews
             path: ./pages/docs/previews.mdx
-            slug: docs/previews
       - section: Component Library
         contents:
           - page: Cards
             path: ./pages/docs/components/card.mdx
-            slug: docs/components/cards
           - page: Callout 
             path: ./pages/docs/components/callout.mdx
-            slug: docs/components/callout
           - page: Icons 
             path: ./pages/docs/components/icons.mdx
-            slug: docs/components/icons
+          - page: Availability 
+            path: ./pages/docs/components/availability.mdx
   - tab: backend
     layout: 
       - section: Server boilerplate
         contents: 
           - page: Express.js
             path: ./pages/server-boilerplate/express.mdx
-            slug: server-boilerplate/express
           - page: FastAPI
             path: ./pages/server-boilerplate/fastapi.mdx
-            slug: server-boilerplate/fastapi
           - page: Spring
             path: ./pages/server-boilerplate/spring.mdx
-            slug: server-boilerplate/spring      
           - page: Go
             path: ./pages/server-boilerplate/go.mdx
-            slug: server-boilerplate/go
           - page: Ruby on Rails
             path: ./pages/server-boilerplate/ruby-on-rails.mdx
-            slug: server-boilerplater/ruby-on-rails
           - page: Flask
             path: ./pages/server-boilerplate/flask.mdx
-            slug: server-boilerplate/flask  
           - page: Django
             path: ./pages/server-boilerplate/django.mdx
-            slug: server-boilerplate/django
   - tab: api
     layout: 
       - section: Overview
         contents: 
           - page: Introduction
             path: ./pages/api/intro.mdx
-            slug: api/intro
       - api: Reference
         api-name: fern
         audiences: 

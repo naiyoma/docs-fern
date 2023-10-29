@@ -1,4 +1,4 @@
-name: publish-docs
+name: Publish Documentation
 
 on:
   push:
@@ -9,17 +9,20 @@ jobs:
   publish-docs:
     needs: fern-check
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: '14'
 
       - name: Download Fern
         run: npm install -g fern-api
 
-      - name: Generate Preview
+      - name: Generate and Publish Documentation with Fern
         env:
           FERN_TOKEN: ${{ secrets.FERN_TOKEN }}
         run: fern generate --docs 

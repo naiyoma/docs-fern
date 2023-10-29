@@ -1,6 +1,9 @@
+# Configuration for Dependabot: Automated dependency updates
+
 version: 2
 updates:
-  - package-ecosystem: "github-actions" # See documentation for possible values
+  - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    target-branch: "main"

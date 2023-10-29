@@ -1,7 +1,44 @@
-Have you made edits to your docs but aren't ready to publish them just yet? You can get a preview URL by executing the following command:
+`PR Previews` allow you to generate a preview URL for your documentation. This is useful if you want to review your documentation changes before publishing them to your live documentation site.
+
+## Usage 
 
 ```bash
-fern generate --docs --preview
+fern generate --docs <instance-url> --preview
 ```
 
-This will generate a link that allows you to review the changes without affecting your live production documentation.  Please note that at present, preview links do not expire, although the time to live (TTL) may be subject to change in the future.
+## Example 
+
+The following is a GitHub Action workflow that generates a preview URL for every pull request.
+
+<CodeBlock title = ".github/workflows/preview-docs.yml">
+```yaml
+name: preview-docs
+
+on:
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  preview-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+
+      - name: Download Fern
+        run: npm install -g fern-api
+
+      - name: Generate Preview
+        env:
+          FERN_TOKEN: ${{ secrets.FERN_TOKEN }}
+        run: fern generate --docs --preview
+```
+</CodeBlock>
+
+## Link Expiration
+
+Preview links do not expire. However, the time to live (TTL) may be subject to change in the future.

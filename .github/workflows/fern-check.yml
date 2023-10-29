@@ -1,4 +1,4 @@
-name: fern-check
+name: Fern API Validation Check
 
 on:
   pull_request:
@@ -6,14 +6,21 @@ on:
       - main
 
 jobs:
-  fern-check:
+  validate-fern-api:
+    name: Validate using Fern API
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Fern
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Fern API
         run: npm install -g fern-api
 
-      - name: Check Fern API is valid
+      - name: Validate API with Fern
         run: fern check

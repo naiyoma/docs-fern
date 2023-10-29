@@ -1,12 +1,27 @@
-`PR Previews` allow you to generate a preview URL for your documentation. This is useful if you want to review your documentation changes before publishing them to your live documentation site.
+`PR previews` offer a way to preview changes from pull requests (PRs) before merging code to a production branch. This is useful for reviewing documentation changes before publishing them to your live documentation site.
 
 ## Usage 
 
 ```bash
-fern generate --docs <instance-url> --preview
+$ fern generate --docs <instance-url> --preview
 ```
 
-## Example 
+## Example
+
+```bash
+$ fern generate --docs fern.docs.buildwithfern.com --preview
+
+Download @fern/registry Downloading manifest...
+Download @fern/registry Downloading...
+Download @fern/registry Parsing...
+[docs]: Published docs to https://fern-preview-fa86d0dd-7763-4d5f-84d8-6d630dc1742a.docs.buildwithfern.com
+┌─
+│ ✓  Download @fern/registry
+│ ✓  fern.docs.buildwithfern.com
+└─
+```
+
+## Usage in GitHub Actions  
 
 The following is a GitHub Action workflow that generates a preview URL for every pull request.
 

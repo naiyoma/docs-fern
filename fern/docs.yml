@@ -117,24 +117,24 @@ navigation:
           - page: Go SDK
             path: ./pages/sdks/go-sdk.mdx
             slug: sdk/go
-          - page: Ruby
+          - page: Ruby SDK
             path: ./pages/sdks/ruby-sdk.mdx
             slug: sdk/ruby
-          - page: C#
+          - page: C# SDK
             path: ./pages/sdks/csharp-sdk.mdx
             slug: sdk/csharp
-          - page: PHP
+          - page: PHP SDK
             path: ./pages/sdks/php-sdk.mdx
             slug: sdk/php
   - tab: docs
     layout: 
       - section: Overview
         contents:
-          - page: docs.yml reference
-            path: ./pages/docs/docs-yml.mdx
+          - page: Configuration
+            path: ./pages/docs/configuration.mdx
           - page: Custom domain
             path: ./pages/docs/custom-domain.mdx
-          - page: Previews
+          - page: Pull request previews
             path: ./pages/docs/previews.mdx
       - section: Component Library
         contents:

@@ -35,6 +35,12 @@ navigation:
           - page: Quickstart
             path: ./pages/welcome/quickstart.mdx
             slug: quickstart
+          - page: Why Fern?
+            path: ./pages/welcome/why-fern.mdx
+            slug: why-fern
+          - page: Generators 
+            path: ./pages/welcome/generators.mdx
+            slug: generators
       - section: CLI
         contents: 
           - page: Overview 

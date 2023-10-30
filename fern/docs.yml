@@ -67,6 +67,18 @@ navigation:
             path: ./pages/cli/fern-help.mdx
           - page: fern version 
             path: ./pages/cli/fern-version.mdx
+      - section: Tutorials
+        contents: 
+          - page: Publishing to Maven Central  
+            path: ./pages/tutorials/publish-to-maven-central.mdx
+          # - page: Use a TypeScript SDK with React Query
+          #   path: ./pages/tutorials/typescript-sdk-react-query.mdx
+          # - page: Generate a TypeScript SDK for your FastAPI backend
+          #   path: ./pages/tutorials/fastapi-to-typescript-sdk.mdx
+          # - page: Use Fern in a monorepo
+          #   path: ./pages/tutorials/monorepo.mdx
+          # - page: Set up Fern with yarn-pnp
+          #   path: ./pages/tutorials/yarn-pnp.mdx
           
   - tab: api-definition
     layout:          

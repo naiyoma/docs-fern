@@ -150,10 +150,13 @@ navigation:
         contents:
           - page: Configuration
             path: ./pages/docs/configuration.mdx
+            slug: docs/configuration
           - page: Custom domain
             path: ./pages/docs/custom-domain.mdx
+            slug: docs/custom-domain
           - page: Pull request previews
             path: ./pages/docs/previews.mdx
+            slug: docs/previews
       - section: Component Library
         contents:
           - page: Cards

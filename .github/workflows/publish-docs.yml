@@ -6,6 +6,12 @@ on:
       - main 
 
 jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder Step
+        run: echo "A GitHub workflow must contain at least one job with no dependencies. Can remove if we ever add `fern-check` to `publish-docs`."
+
   publish-docs:
     needs: fern-check
     runs-on: ubuntu-latest
